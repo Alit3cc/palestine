@@ -1,0 +1,2828 @@
+<!DOCTYPE html>
+<html lang="el" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <!-- Κρίσιμο: Σενάριο αντι-FOUC για θέμα (πρέπει να είναι πρώτο) -->
+  <script>
+    (function() {
+      var stored = localStorage.getItem('theme');
+      var preferred = stored || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      document.documentElement.setAttribute('data-theme', preferred);
+    })();
+  </script>
+
+  <!-- Κύριο SEO -->
+  <title>Palestine Now — Σταθείτε για τη Δικαιοσύνη | Ελεύθερη Παλαιστίνη</title>
+  <meta name="description" content="Ενωθείτε με εκατομμύρια ανθρώπους που διεκδικούν δικαιοσύνη για την Παλαιστίνη. Μάθετε πώς να μποϊκοτάρετε, να δωρίσετε, να διαδηλώσετε και να ενισχύσετε παλαιστινιακές φωνές. Διαθέσιμο σε 12 γλώσσες. Δράστε σήμερα.">
+  <meta name="keywords" content="Παλαιστίνη, αλληλεγγύη, BDS, μποϊκοτάζ, Γάζα, Δυτική Όχθη, ανθρώπινα δικαιώματα, δικαιοσύνη, κατάπαυση πυρός, ελεύθερη Παλαιστίνη">
+  <meta name="author" content="Palestine Now">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://palestinenow.org/el/">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Palestine Now — Σταθείτε για τη Δικαιοσύνη">
+  <meta property="og:description" content="Ενωθείτε με εκατομμύρια ανθρώπους που διεκδικούν δικαιοσύνη για την Παλαιστίνη. Μάθετε πώς να δράσετε, να δωρίσετε και να ενισχύσετε.">
+  <meta property="og:url" content="https://palestinenow.org/el/">
+  <meta property="og:image" content="https://palestinenow.org/img/og-image.jpg">
+  <meta property="og:locale" content="el_GR">
+  <meta property="og:site_name" content="Palestine Now">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Palestine Now — Σταθείτε για τη Δικαιοσύνη">
+  <meta name="twitter:description" content="Ενωθείτε με εκατομμύρια ανθρώπους που διεκδικούν δικαιοσύνη για την Παλαιστίνη.">
+  <meta name="twitter:image" content="https://palestinenow.org/img/og-image.jpg">
+
+  <!-- hreflang -->
+  <link rel="alternate" hreflang="en" href="https://palestinenow.org/">
+  <link rel="alternate" hreflang="de" href="https://palestinenow.org/de/">
+  <link rel="alternate" hreflang="tr" href="https://palestinenow.org/tr/">
+  <link rel="alternate" hreflang="ar" href="https://palestinenow.org/ar/">
+  <link rel="alternate" hreflang="ru" href="https://palestinenow.org/ru/">
+  <link rel="alternate" hreflang="el" href="https://palestinenow.org/el/">
+  <link rel="alternate" hreflang="zh" href="https://palestinenow.org/zh/">
+  <link rel="alternate" hreflang="fr" href="https://palestinenow.org/fr/">
+  <link rel="alternate" hreflang="es" href="https://palestinenow.org/es/">
+  <link rel="alternate" hreflang="pt" href="https://palestinenow.org/pt/">
+  <link rel="alternate" hreflang="fa" href="https://palestinenow.org/fa/">
+  <link rel="alternate" hreflang="ur" href="https://palestinenow.org/ur/">
+  <link rel="alternate" hreflang="x-default" href="https://palestinenow.org/">
+
+  <!-- Schema.org JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://palestinenow.org/#website",
+        "name": "Palestine Now",
+        "url": "https://palestinenow.org",
+        "description": "Μια πολύγλωσση πλατφόρμα αλληλεγγύης για τη δικαιοσύνη, τα ανθρώπινα δικαιώματα και την ειρηνική δράση στην Παλαιστίνη.",
+        "inLanguage": ["en","de","tr","ar","ru","el","zh","fr","es","pt","fa","ur"],
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://palestinenow.org/?q={search_term_string}",
+          "query-input": "required name=search_term_string"
+        }
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://palestinenow.org/#organization",
+        "name": "Palestine Now",
+        "url": "https://palestinenow.org",
+        "description": "Μια ανεξάρτητη, αμερόληπτη πλατφόρμα παλαιστινιακής αλληλεγγύης, εκπαίδευσης για τα ανθρώπινα δικαιώματα και ειρηνικής δράσης.",
+        "sameAs": []
+      }
+    ]
+  }
+  </script>
+
+  <!-- Web App Manifest -->
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#ce1126">
+  
+  <!-- Favicons -->
+  <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <meta name="apple-mobile-web-app-title" content="Palestine" />
+  
+  <style>
+    /* ============================================================
+       RESET & BASE
+    ============================================================ */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* ============================================================
+       CSS CUSTOM PROPERTIES
+    ============================================================ */
+    :root {
+      /* Χρώματα — Ανοιχτή Λειτουργία */
+      --color-bg: #fafaf8;
+      --color-surface: #f0ede8;
+      --color-surface-alt: #e8e4de;
+      --color-text: #0a0a0a;
+      --color-text-muted: #4a4a4a;
+      --color-accent-red: #ce1126;
+      --color-accent-red-hover: #a50d1e;
+      --color-accent-green: #007a3d;
+      --color-accent-green-hover: #005c2d;
+      --color-border: #d4cfc8;
+      --color-ink: #1a1a1a;
+      --color-inverse-bg: #0a0a0a;
+      --color-inverse-text: #fafaf8;
+      --color-inverse-text-muted: #a09890;
+
+      /* Τυπογραφία */
+      --font-display: Georgia, 'Times New Roman', 'Times', serif;
+      --font-body: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, 'Helvetica Neue', Arial, sans-serif;
+
+      /* Απόσταση */
+      --section-padding: clamp(4rem, 10vw, 8rem);
+      --container-max: 1200px;
+      --container-padding: clamp(1.25rem, 5vw, 3rem);
+
+      /* Μεταβάσεις */
+      --transition-fast: 150ms ease;
+      --transition-med: 300ms ease;
+      --transition-slow: 500ms ease;
+
+      /* Ύψος κεφαλίδας */
+      --header-h: 70px;
+
+      /* Σκιές */
+      --shadow-sm: 0 1px 3px rgba(0,0,0,0.08), 0 1px 2px rgba(0,0,0,0.06);
+      --shadow-md: 0 4px 16px rgba(0,0,0,0.10);
+      --shadow-lg: 0 8px 32px rgba(0,0,0,0.14);
+    }
+
+    [data-theme="dark"] {
+      --color-bg: #0e0d0b;
+      --color-surface: #1a1917;
+      --color-surface-alt: #222018;
+      --color-text: #f5f2ed;
+      --color-text-muted: #a09890;
+      --color-accent-red: #e8203a;
+      --color-accent-red-hover: #f03350;
+      --color-accent-green: #00a050;
+      --color-accent-green-hover: #00c060;
+      --color-border: #2d2b28;
+      --color-ink: #f0ede8;
+      --color-inverse-bg: #f5f2ed;
+      --color-inverse-text: #0a0a0a;
+      --color-inverse-text-muted: #44413d;
+
+      --shadow-sm: 0 1px 3px rgba(0,0,0,0.3);
+      --shadow-md: 0 4px 16px rgba(0,0,0,0.4);
+      --shadow-lg: 0 8px 32px rgba(0,0,0,0.5);
+    }
+
+    /* ============================================================
+       ΓΕΝΙΚΑ ΣΤΥΛ
+    ============================================================ */
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+      -webkit-text-size-adjust: 100%;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+
+    body {
+      font-family: var(--font-body);
+      background-color: var(--color-bg);
+      color: var(--color-text);
+      line-height: 1.65;
+      transition: background-color var(--transition-med), color var(--transition-med);
+      overflow-x: hidden;
+    }
+
+    /* ============================================================
+       ΣΧΕΔΙΟ ΠΑΡΑΒΛΕΨΗΣ
+    ============================================================ */
+    .skip-link {
+      position: absolute;
+      top: -100px;
+      left: 1rem;
+      z-index: 9999;
+      background: var(--color-accent-red);
+      color: #fff;
+      padding: 0.75rem 1.5rem;
+      border-radius: 0 0 4px 4px;
+      font-family: var(--font-body);
+      font-weight: 600;
+      font-size: 0.9rem;
+      text-decoration: none;
+      transition: top var(--transition-fast);
+    }
+    .skip-link:focus {
+      top: 0;
+      outline: 3px solid #fff;
+      outline-offset: 2px;
+    }
+
+    /* ============================================================
+       ΤΥΠΟΓΡΑΦΙΑ
+    ============================================================ */
+    h1, h2, h3, h4, h5, h6 {
+      font-family: var(--font-display);
+      color: var(--color-text);
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+    }
+
+    .section-label {
+      font-family: var(--font-body);
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--color-accent-red);
+      display: block;
+      margin-bottom: 0.75rem;
+    }
+
+    .section-title {
+      font-size: clamp(1.75rem, 4vw, 3rem);
+      font-family: var(--font-display);
+      border-left: 4px solid var(--color-accent-red);
+      padding-left: 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .section-title.green {
+      border-left-color: var(--color-accent-green);
+    }
+
+    p { margin-bottom: 1rem; }
+    p:last-child { margin-bottom: 0; }
+
+    a {
+      color: var(--color-accent-red);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+    a:hover { color: var(--color-accent-red-hover); }
+    a:focus-visible {
+      outline: 2px solid var(--color-accent-red);
+      outline-offset: 3px;
+      border-radius: 2px;
+    }
+
+    cite {
+      font-style: normal;
+      font-size: 0.8rem;
+      color: var(--color-text-muted);
+    }
+
+    /* ============================================================
+       ΒΟΗΘΗΤΙΚΕΣ ΚΛΑΣΕΙΣ ΔΙΑΤΑΞΗΣ
+    ============================================================ */
+    .container {
+      max-width: var(--container-max);
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: var(--container-padding);
+      padding-right: var(--container-padding);
+    }
+
+    .section-pad {
+      padding-top: var(--section-padding);
+      padding-bottom: var(--section-padding);
+    }
+
+    /* ============================================================
+       ΚΟΥΜΠΙΑ
+    ============================================================ */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.85rem 2rem;
+      font-family: var(--font-body);
+      font-size: 0.9rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      text-decoration: none;
+      border: 2px solid transparent;
+      cursor: pointer;
+      transition: background-color var(--transition-fast), color var(--transition-fast), border-color var(--transition-fast), transform var(--transition-fast);
+      border-radius: 2px;
+    }
+    .btn:hover { transform: translateY(-1px); }
+    .btn:active { transform: translateY(0); }
+    .btn:focus-visible {
+      outline: 3px solid var(--color-accent-red);
+      outline-offset: 3px;
+    }
+
+    .btn-primary {
+      background: var(--color-accent-red);
+      color: #fff;
+      border-color: var(--color-accent-red);
+    }
+    .btn-primary:hover {
+      background: var(--color-accent-red-hover);
+      border-color: var(--color-accent-red-hover);
+      color: #fff;
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--color-text);
+      border-color: var(--color-border);
+    }
+    .btn-outline:hover {
+      border-color: var(--color-text);
+      color: var(--color-text);
+    }
+
+    .btn-outline-white {
+      background: transparent;
+      color: #fff;
+      border-color: rgba(255,255,255,0.6);
+    }
+    .btn-outline-white:hover {
+      border-color: #fff;
+      background: rgba(255,255,255,0.1);
+      color: #fff;
+    }
+
+    .btn-green {
+      background: var(--color-accent-green);
+      color: #fff;
+      border-color: var(--color-accent-green);
+    }
+    .btn-green:hover {
+      background: var(--color-accent-green-hover);
+      border-color: var(--color-accent-green-hover);
+      color: #fff;
+    }
+
+    .btn-sm {
+      padding: 0.5rem 1.25rem;
+      font-size: 0.8rem;
+    }
+
+    /* ============================================================
+       ΚΕΦΑΛΙΔΑ / ΠΛΟΗΓΗΣΗ
+    ============================================================ */
+    .site-header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      height: var(--header-h);
+      background: var(--color-bg);
+      border-bottom: 1px solid var(--color-border);
+      transition: background-color var(--transition-med), border-color var(--transition-med), box-shadow var(--transition-fast);
+      max-width: 100vw;
+    }
+    .site-header.scrolled {
+      box-shadow: var(--shadow-md);
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 100%;
+      max-width: var(--container-max);
+      margin: auto;
+      padding: 0 var(--container-padding);
+      gap: 1.5rem;
+    }
+
+    .logo {
+      font-family: var(--font-display);
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--color-text);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+    .logo:hover { color: var(--color-accent-red); }
+    .logo .logo-icon { font-size: 1.3em; }
+    .logo .logo-accent { color: var(--color-accent-red); }
+
+    .main-nav {
+      display: flex;
+      align-items: center;
+      gap: 0.25rem;
+    }
+
+    .nav-link {
+      font-family: var(--font-body);
+      font-size: 0.82rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--color-text-muted);
+      text-decoration: none;
+      padding: 0.4rem 0.65rem;
+      border-radius: 2px;
+      transition: color var(--transition-fast), background var(--transition-fast);
+    }
+    .nav-link:hover {
+      color: var(--color-text);
+      background: var(--color-surface);
+    }
+    .nav-link:focus-visible {
+      outline: 2px solid var(--color-accent-red);
+      outline-offset: 2px;
+    }
+
+    /* Στοιχεία ελέγχου κεφαλίδας */
+    .header-controls {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      flex-shrink: 0;
+    }
+
+    /* Εναλλαγή θέματος */
+    .theme-toggle,
+    .github-link {
+      background: none;
+      border: 1px solid var(--color-border);
+      border-radius: 2px;
+      width: 38px;
+      height: 38px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      color: var(--color-text);
+      transition: border-color var(--transition-fast), background var(--transition-fast), color var(--transition-fast);
+      text-decoration: none;
+      flex-shrink: 0;
+    }
+    .theme-toggle:hover,
+    .github-link:hover {
+      border-color: var(--color-text);
+      background: var(--color-surface);
+      color: var(--color-text);
+    }
+    .theme-toggle:focus-visible,
+    .github-link:focus-visible {
+      outline: 2px solid var(--color-accent-red);
+      outline-offset: 2px;
+    }
+    .theme-toggle svg,
+    .github-link svg { width: 18px; height: 18px; pointer-events: none; }
+    .icon-sun { display: none; }
+    .icon-moon { display: block; }
+    [data-theme="dark"] .icon-sun { display: block; }
+    [data-theme="dark"] .icon-moon { display: none; }
+
+    /* Αναπτυσσόμενο μενού γλώσσας */
+    .lang-switcher {
+      position: relative;
+    }
+    .lang-btn {
+      background: none;
+      border: 1px solid var(--color-border);
+      border-radius: 2px;
+      height: 38px;
+      padding: 0 0.75rem;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      cursor: pointer;
+      color: var(--color-text);
+      font-size: 0.8rem;
+      font-weight: 600;
+      font-family: var(--font-body);
+      white-space: nowrap;
+      transition: border-color var(--transition-fast), background var(--transition-fast);
+    }
+    .lang-btn:hover {
+      border-color: var(--color-text);
+      background: var(--color-surface);
+    }
+    .lang-btn:focus-visible {
+      outline: 2px solid var(--color-accent-red);
+      outline-offset: 2px;
+    }
+    .lang-btn svg { width: 14px; height: 14px; transition: transform var(--transition-fast); }
+    .lang-btn[aria-expanded="true"] svg { transform: rotate(180deg); }
+
+    .lang-dropdown {
+      position: absolute;
+      top: calc(100% + 6px);
+      right: 0;
+      background: var(--color-bg);
+      border: 1px solid var(--color-border);
+      border-radius: 4px;
+      box-shadow: var(--shadow-lg);
+      min-width: 200px;
+      display: none;
+      z-index: 100;
+      overflow: hidden;
+    }
+    .lang-dropdown.open { display: block; }
+
+    .lang-dropdown a {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      padding: 0.6rem 1rem;
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: var(--color-text);
+      text-decoration: none;
+      transition: background var(--transition-fast);
+    }
+    .lang-dropdown a:hover { background: var(--color-surface); }
+    .lang-dropdown a.active {
+      color: var(--color-accent-red);
+      font-weight: 700;
+    }
+    .lang-dropdown a .lang-native { color: var(--color-text-muted); font-size: 0.8rem; }
+
+    /* Κινητό μενού */
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: 1px solid var(--color-border);
+      border-radius: 2px;
+      width: 38px;
+      height: 38px;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 5px;
+      cursor: pointer;
+      transition: border-color var(--transition-fast);
+    }
+    .menu-toggle:hover { border-color: var(--color-text); }
+    .menu-toggle:focus-visible {
+      outline: 2px solid var(--color-accent-red);
+      outline-offset: 2px;
+    }
+    .menu-toggle span {
+      display: block;
+      width: 18px;
+      height: 2px;
+      background: var(--color-text);
+      transition: transform var(--transition-fast), opacity var(--transition-fast);
+    }
+    .menu-toggle.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .menu-toggle.open span:nth-child(2) { opacity: 0; }
+    .menu-toggle.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+    .mobile-nav {
+      display: none;
+      position: fixed;
+      top: var(--header-h);
+      left: 0; right: 0;
+      background: var(--color-bg);
+      border-bottom: 1px solid var(--color-border);
+      padding: 1.5rem var(--container-padding);
+      z-index: 999;
+      box-shadow: var(--shadow-lg);
+    }
+    .mobile-nav.open { display: block; }
+    .mobile-nav a {
+      display: block;
+      padding: 0.75rem 0;
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--color-text);
+      text-decoration: none;
+      border-bottom: 1px solid var(--color-border);
+    }
+    .mobile-nav a:last-child { border-bottom: none; }
+    .mobile-nav a:hover { color: var(--color-accent-red); }
+
+    @media (max-width: 900px) {
+      .main-nav { display: none; }
+      .menu-toggle { display: flex; }
+    }
+    @media (max-width: 600px) {
+      .lang-btn .lang-label { display: none; }
+    }
+
+    /* ============================================================
+       ΗΡΩΑΣ
+    ============================================================ */
+    #hero {
+      min-height: 100vh;
+      min-height: 100dvh;
+      display: flex;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+      padding-top: var(--header-h);
+      background-color: var(--color-ink);
+    }
+
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 80% 60% at 20% 50%, rgba(206,17,38,0.15) 0%, transparent 60%),
+        radial-gradient(ellipse 60% 80% at 80% 30%, rgba(0,122,61,0.12) 0%, transparent 60%),
+        radial-gradient(ellipse 100% 100% at 50% 100%, rgba(0,0,0,0.4) 0%, transparent 70%);
+      z-index: 0;
+    }
+
+    /* Λεπτή γεωμετρική υφή */
+    .hero-bg::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: repeating-linear-gradient(
+        0deg,
+        transparent,
+        transparent 79px,
+        rgba(255,255,255,0.02) 79px,
+        rgba(255,255,255,0.02) 80px
+      ),
+      repeating-linear-gradient(
+        90deg,
+        transparent,
+        transparent 79px,
+        rgba(255,255,255,0.02) 79px,
+        rgba(255,255,255,0.02) 80px
+      );
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: var(--container-max);
+      margin: auto;
+      padding: clamp(3rem, 8vw, 6rem) var(--container-padding);
+    }
+
+    .hero-kicker {
+      font-family: var(--font-body);
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--color-accent-red);
+      margin-bottom: 1.5rem;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeUp 0.7s ease 0.1s forwards;
+    }
+
+    .hero-headline {
+      font-family: var(--font-display);
+      font-size: clamp(2.8rem, 9vw, 8rem);
+      line-height: 0.95;
+      letter-spacing: -0.03em;
+      color: var(--color-inverse-text);
+      margin-bottom: 1.5rem;
+      max-width: 14ch;
+      opacity: 0;
+      transform: translateY(30px);
+      animation: fadeUp 0.8s ease 0.25s forwards;
+    }
+
+    .hero-headline .accent-line {
+      display: block;
+      color: var(--color-accent-red);
+      font-style: italic;
+    }
+
+    .hero-subline {
+      font-size: clamp(1rem, 2.5vw, 1.35rem);
+      color: var(--color-inverse-text-muted);
+      max-width: 520px;
+      margin-bottom: 2.5rem;
+      line-height: 1.6;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeUp 0.7s ease 0.45s forwards;
+    }
+
+    .hero-ctas {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeUp 0.7s ease 0.6s forwards;
+    }
+
+    .hero-flag {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 40%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      opacity: 0.06;
+      pointer-events: none;
+    }
+    .hero-flag-stripe { flex: 1; }
+    .hero-flag-stripe.black { background: #000; }
+    .hero-flag-stripe.white { background: #fff; }
+    .hero-flag-stripe.green { background: #007a3d; }
+    /* Κόκκινο τρίγωνο με clip-path */
+    .hero-flag-triangle {
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 35%;
+      background: #ce1126;
+      clip-path: polygon(0 0, 100% 50%, 0 100%);
+    }
+
+    @keyframes fadeUp {
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 600px) {
+      .hero-flag { display: none; }
+    }
+
+    /* ============================================================
+       ΔΙΑΧΩΡΙΣΤΙΚΑ
+    ============================================================ */
+    .stripe-divider {
+      height: 6px;
+      display: flex;
+    }
+    .stripe-divider .s1 { flex: 1; background: var(--color-text); }
+    .stripe-divider .s2 { flex: 1; background: var(--color-accent-red); }
+    .stripe-divider .s3 { flex: 1; background: var(--color-border); }
+    .stripe-divider .s4 { flex: 1; background: var(--color-accent-green); }
+
+    /* ============================================================
+       ΣΧΕΤΙΚΑ / ΑΠΟΣΤΟΛΗ
+    ============================================================ */
+    #about {
+      background: var(--color-bg);
+    }
+
+    .mission-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem 5rem;
+      align-items: start;
+      margin-top: 3rem;
+    }
+
+    .mission-intro {
+      font-size: clamp(1.05rem, 2vw, 1.2rem);
+      line-height: 1.7;
+      color: var(--color-text-muted);
+    }
+
+    .mission-cards {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .mission-card {
+      display: flex;
+      gap: 1.25rem;
+      align-items: flex-start;
+      padding: 1.5rem;
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: 2px;
+      transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+    }
+    .mission-card:hover {
+      border-color: var(--color-accent-red);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .mission-icon {
+      width: 44px;
+      height: 44px;
+      flex-shrink: 0;
+      background: var(--color-accent-red);
+      border-radius: 2px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+    }
+    .mission-icon.green { background: var(--color-accent-green); }
+    .mission-icon.dark { background: var(--color-ink); }
+    .mission-icon svg { width: 22px; height: 22px; }
+
+    .mission-card h3 {
+      font-family: var(--font-display);
+      font-size: 1.05rem;
+      margin-bottom: 0.35rem;
+    }
+    .mission-card p {
+      font-size: 0.88rem;
+      color: var(--color-text-muted);
+      margin: 0;
+    }
+
+    .disclaimer-box {
+      margin-top: 3rem;
+      padding: 1.25rem 1.5rem;
+      border-left: 4px solid var(--color-accent-green);
+      background: var(--color-surface);
+      font-size: 0.875rem;
+      color: var(--color-text-muted);
+      border-radius: 0 2px 2px 0;
+    }
+
+    @media (max-width: 768px) {
+      .mission-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+    }
+
+    /* ============================================================
+       ΠΛΑΙΣΙΟ / ΤΙ ΣΥΜΒΑΙΝΕΙ
+    ============================================================ */
+    #context {
+      background: var(--color-surface);
+    }
+
+    #context .section-label { color: var(--color-accent-red); }
+    #context .section-title {
+      color: var(--color-text);
+      border-left-color: var(--color-accent-red);
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2px;
+      margin: 3rem 0;
+      background: var(--color-border);
+    }
+
+    .stat-card {
+      background: var(--color-surface-alt);
+      padding: 2.5rem 2rem;
+      text-align: center;
+      position: relative;
+    }
+
+    .stat-number {
+      font-family: var(--font-display);
+      font-size: clamp(2.5rem, 6vw, 5rem);
+      font-weight: 700;
+      line-height: 1;
+      color: var(--color-accent-red);
+      display: block;
+      letter-spacing: -0.03em;
+    }
+    .stat-label {
+      font-size: 0.82rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--color-text-muted);
+      margin-top: 0.5rem;
+      display: block;
+    }
+    .stat-source {
+      font-size: 0.7rem;
+      color: var(--color-text-muted);
+      opacity: 0.6;
+      margin-top: 0.4rem;
+      display: block;
+    }
+
+    @media (max-width: 600px) {
+      .stats-grid { grid-template-columns: 1fr 1fr; }
+      .stats-grid .stat-card:last-child { grid-column: 1 / -1; }
+    }
+
+    @media (max-width: 430px) {
+      .stats-grid { grid-template-columns: 1fr; }
+    }
+
+    /* Χρονοδιάγραμμα */
+    .timeline-wrap {
+      margin-top: 4rem;
+    }
+
+    .timeline-title {
+      font-family: var(--font-body);
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--color-text-muted);
+      margin-bottom: 2rem;
+    }
+
+    .timeline {
+      position: relative;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0;
+    }
+
+    .timeline::before {
+      content: '';
+      position: absolute;
+      top: 22px;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: var(--color-border);
+    }
+
+    .timeline-item {
+      flex: 1;
+      min-width: 120px;
+      padding-top: 3rem;
+      padding-right: 1rem;
+      position: relative;
+    }
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      top: 16px;
+      left: 0;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: var(--color-accent-red);
+      border: 2px solid var(--color-surface);
+    }
+    .timeline-year {
+      font-family: var(--font-display);
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--color-text);
+      display: block;
+      margin-bottom: 0.35rem;
+    }
+    .timeline-event {
+      font-size: 0.8rem;
+      color: var(--color-text-muted);
+      line-height: 1.5;
+    }
+
+    .context-sources {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--color-border);
+      font-size: 0.75rem;
+      color: var(--color-text-muted);
+    }
+    .context-sources a {
+      color: var(--color-accent-red);
+    }
+
+    /* ============================================================
+       ΔΡΑΣΗ
+    ============================================================ */
+    #act {
+      background: var(--color-bg);
+    }
+
+    .tabs-wrap {
+      margin-top: 2.5rem;
+    }
+
+    .tab-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0;
+      border-bottom: 2px solid var(--color-border);
+      margin-bottom: 0;
+      list-style: none;
+      role: tablist;
+    }
+
+    .tab-btn {
+      background: none;
+      border: none;
+      border-bottom: 3px solid transparent;
+      margin-bottom: -2px;
+      padding: 0.75rem 1.25rem;
+      font-family: var(--font-body);
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      color: var(--color-text-muted);
+      cursor: pointer;
+      transition: color var(--transition-fast), border-color var(--transition-fast);
+      white-space: nowrap;
+    }
+    .tab-btn:hover { color: var(--color-text); }
+    .tab-btn[aria-selected="true"] {
+      color: var(--color-accent-red);
+      border-bottom-color: var(--color-accent-red);
+    }
+    .tab-btn:focus-visible {
+      outline: 2px solid var(--color-accent-red);
+      outline-offset: -2px;
+    }
+
+    .tab-panel {
+      display: none;
+      padding: 2.5rem 0;
+      animation: fadeIn 0.3s ease;
+    }
+    .tab-panel.active { display: block; }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(8px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Καρτέλα μποϊκοτάζ */
+    .boycott-intro {
+      font-size: 1rem;
+      color: var(--color-text-muted);
+      max-width: 680px;
+      margin-bottom: 2rem;
+    }
+
+    .boycott-categories {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .boycott-cat {
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: 2px;
+      padding: 1.5rem;
+    }
+    .boycott-cat h4 {
+      font-family: var(--font-body);
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--color-accent-red);
+      margin-bottom: 0.75rem;
+    }
+    .boycott-list {
+      list-style: none;
+      font-size: 0.875rem;
+      color: var(--color-text-muted);
+    }
+    .boycott-list li {
+      padding: 0.3rem 0;
+      border-bottom: 1px solid var(--color-border);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .boycott-list li:last-child { border-bottom: none; }
+    .boycott-list li::before {
+      content: '—';
+      color: var(--color-accent-red);
+      font-size: 0.8rem;
+    }
+
+    .boycott-note {
+      padding: 1rem 1.25rem;
+      background: var(--color-surface);
+      border-left: 3px solid var(--color-accent-green);
+      font-size: 0.85rem;
+      color: var(--color-text-muted);
+      border-radius: 0 2px 2px 0;
+    }
+
+    /* Καρτέλα δωρεάς */
+    .donate-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.25rem;
+    }
+
+    .org-card {
+      border: 1px solid var(--color-border);
+      border-radius: 2px;
+      padding: 1.5rem;
+      background: var(--color-surface);
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+    }
+    .org-card:hover {
+      border-color: var(--color-accent-green);
+      box-shadow: var(--shadow-sm);
+    }
+    .org-card-name {
+      font-family: var(--font-display);
+      font-size: 1.05rem;
+      color: var(--color-text);
+    }
+    .org-card-desc {
+      font-size: 0.85rem;
+      color: var(--color-text-muted);
+      line-height: 1.6;
+      flex: 1;
+    }
+
+    /* Καρτέλα ενίσχυσης */
+    .hashtag-cloud {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin: 1.5rem 0;
+    }
+    .hashtag {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.5rem 1rem;
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: 999px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--color-text);
+      font-family: var(--font-body);
+      text-decoration: none;
+      cursor: pointer;
+      transition: background var(--transition-fast), border-color var(--transition-fast), color var(--transition-fast), transform var(--transition-fast);
+      user-select: none;
+      -webkit-user-select: none;
+    }
+    .hashtag:hover {
+      background: var(--color-accent-red);
+      border-color: var(--color-accent-red);
+      color: #fff;
+      transform: translateY(-1px);
+    }
+    .hashtag:active { transform: translateY(0); }
+    .hashtag:focus-visible {
+      outline: 2px solid var(--color-accent-red);
+      outline-offset: 2px;
+    }
+    .hashtag.copied {
+      background: var(--color-accent-green);
+      border-color: var(--color-accent-green);
+      color: #fff;
+    }
+    .hashtag-copy-icon {
+      width: 11px;
+      height: 11px;
+      opacity: 0.55;
+      flex-shrink: 0;
+      pointer-events: none;
+    }
+    .hashtag-hint {
+      font-size: 0.75rem;
+      color: var(--color-text-muted);
+      margin-top: 0.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.35rem;
+    }
+
+    /* Καρτέλα επικοινωνίας */
+    .email-template-wrap {
+      position: relative;
+      margin-top: 1.5rem;
+    }
+    .email-template-wrap textarea {
+      width: 100%;
+      min-height: 220px;
+      padding: 1.25rem;
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: 2px;
+      color: var(--color-text);
+      font-family: var(--font-body);
+      font-size: 0.875rem;
+      line-height: 1.65;
+      resize: vertical;
+    }
+    .email-template-wrap textarea:focus {
+      outline: 2px solid var(--color-accent-red);
+      outline-offset: 0;
+    }
+    .copy-feedback {
+      font-size: 0.8rem;
+      color: var(--color-accent-green);
+      margin-left: 0.75rem;
+      opacity: 0;
+      transition: opacity var(--transition-fast);
+    }
+    .copy-feedback.show { opacity: 1; }
+
+    .rep-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-top: 1.5rem;
+    }
+
+    /* Καρτέλα διαδήλωσης */
+    .protest-orgs {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+
+    .protest-org-card {
+      padding: 1.25rem;
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: 2px;
+    }
+    .protest-org-card .country {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--color-text-muted);
+      margin-bottom: 0.35rem;
+    }
+    .protest-org-card h4 {
+      font-family: var(--font-display);
+      font-size: 0.95rem;
+      margin-bottom: 0.5rem;
+    }
+
+    /* Καρτέλα εκπαίδευσης */
+    .edu-columns {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+    .edu-col h4 {
+      font-family: var(--font-body);
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--color-accent-red);
+      margin-bottom: 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid var(--color-border);
+    }
+    .edu-item {
+      padding: 0.75rem 0;
+      border-bottom: 1px solid var(--color-border);
+    }
+    .edu-item:last-child { border-bottom: none; }
+    .edu-item-title {
+      font-family: var(--font-display);
+      font-size: 0.9rem;
+      display: block;
+      margin-bottom: 0.2rem;
+    }
+    .edu-item-author {
+      font-size: 0.78rem;
+      color: var(--color-text-muted);
+    }
+
+    /* ============================================================
+       ΣΥΧΝΕΣ ΕΡΩΤΗΣΕΙΣ
+    ============================================================ */
+    #faq {
+      background: var(--color-surface);
+    }
+
+    .faq-list {
+      margin-top: 2.5rem;
+      border-top: 1px solid var(--color-border);
+    }
+
+    .faq-item {
+      border-bottom: 1px solid var(--color-border);
+    }
+
+    .faq-question {
+      width: 100%;
+      text-align: left;
+      background: none;
+      border: none;
+      padding: 1.5rem 0;
+      font-family: var(--font-display);
+      font-size: clamp(0.95rem, 2vw, 1.1rem);
+      color: var(--color-text);
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      line-height: 1.4;
+    }
+    .faq-question:hover { color: var(--color-accent-red); }
+    .faq-question:focus-visible {
+      outline: 2px solid var(--color-accent-red);
+      outline-offset: 3px;
+    }
+    .faq-icon {
+      flex-shrink: 0;
+      width: 24px;
+      height: 24px;
+      background: var(--color-surface-alt);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background var(--transition-fast), transform var(--transition-fast);
+    }
+    .faq-icon svg { width: 12px; height: 12px; }
+    .faq-question[aria-expanded="true"] .faq-icon {
+      background: var(--color-accent-red);
+      color: #fff;
+      transform: rotate(45deg);
+    }
+    .faq-question[aria-expanded="true"] .faq-icon svg { stroke: #fff; }
+
+    .faq-answer {
+      overflow: hidden;
+      max-height: 0;
+      transition: max-height 0.35s ease;
+    }
+    .faq-answer-inner {
+      padding: 0 0 1.5rem 0;
+      font-size: 0.92rem;
+      color: var(--color-text-muted);
+      line-height: 1.75;
+      max-width: 720px;
+    }
+    .faq-answer-inner a { color: var(--color-accent-red); }
+
+    /* ============================================================
+       ΠΗΓΕΣ
+    ============================================================ */
+    #resources {
+      background: var(--color-bg);
+    }
+
+    .resources-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.25rem;
+      margin-top: 2.5rem;
+    }
+
+    .resource-group {
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: 2px;
+      overflow: hidden;
+    }
+
+    .resource-group-header {
+      padding: 0.85rem 1.25rem;
+      background: var(--color-text);
+      color: var(--color-bg);
+      font-family: var(--font-body);
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+    .resource-group-header.red { background: var(--color-accent-red); color: #fff; }
+    .resource-group-header.green { background: var(--color-accent-green); color: #fff; }
+
+    .resource-link {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.85rem 1.25rem;
+      border-bottom: 1px solid var(--color-border);
+      text-decoration: none;
+      color: var(--color-text);
+      font-size: 0.875rem;
+      transition: background var(--transition-fast);
+    }
+    .resource-link:last-child { border-bottom: none; }
+    .resource-link:hover {
+      background: var(--color-surface-alt);
+      color: var(--color-text);
+    }
+    .resource-link-name { font-weight: 600; }
+    .resource-link-desc { font-size: 0.78rem; color: var(--color-text-muted); margin-top: 0.15rem; }
+    .resource-arrow {
+      color: var(--color-text-muted);
+      flex-shrink: 0;
+      font-size: 0.8rem;
+    }
+
+    /* ============================================================
+       ΥΠΟΣΕΛΙΔΟ
+    ============================================================ */
+    .site-footer {
+      background: var(--color-surface);
+      color: var(--color-text-muted);
+      padding: clamp(3rem, 6vw, 5rem) 0 0;
+      border-top: 1px solid var(--color-border);
+    }
+
+    .footer-top {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr;
+      gap: 3rem;
+      max-width: var(--container-max);
+      margin: auto;
+      padding: 0 var(--container-padding);
+      padding-bottom: clamp(2.5rem, 5vw, 4rem);
+    }
+
+    .footer-brand .logo {
+      color: var(--color-text);
+      margin-bottom: 1rem;
+    }
+    .footer-brand p {
+      font-size: 0.85rem;
+      line-height: 1.7;
+      margin-bottom: 1.25rem;
+      color: var(--color-text-muted);
+    }
+
+    .footer-col h4 {
+      font-family: var(--font-body);
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--color-text-muted);
+      margin-bottom: 1rem;
+    }
+
+    .footer-lang-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+    }
+    .footer-lang-list a {
+      color: var(--color-text-muted);
+      text-decoration: none;
+      font-size: 0.85rem;
+      transition: color var(--transition-fast);
+    }
+    .footer-lang-list a:hover { color: var(--color-text); }
+
+    .footer-nav-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+    }
+    .footer-nav-list a {
+      color: var(--color-text-muted);
+      text-decoration: none;
+      font-size: 0.85rem;
+      transition: color var(--transition-fast);
+    }
+    .footer-nav-list a:hover { color: var(--color-text); }
+
+    .footer-bottom {
+      border-top: 1px solid var(--color-border);
+      padding: 1.25rem var(--container-padding);
+      max-width: var(--container-max);
+      margin: auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+    }
+    .footer-bottom-text {
+      font-size: 0.78rem;
+      color: var(--color-text-muted);
+    }
+
+    /* Εναλλαγή θέματος στο υποσέλιδο */
+    .footer-controls {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    .footer-theme-btn {
+      background: var(--color-surface-alt);
+      border: 1px solid var(--color-border);
+      border-radius: 2px;
+      padding: 0.4rem 0.75rem;
+      color: var(--color-text-muted);
+      font-size: 0.78rem;
+      font-weight: 600;
+      cursor: pointer;
+      font-family: var(--font-body);
+      transition: background var(--transition-fast), color var(--transition-fast);
+    }
+    .footer-theme-btn:hover {
+      background: var(--color-border);
+      color: var(--color-text);
+    }
+    .footer-theme-btn:focus-visible {
+      outline: 2px solid var(--color-accent-red);
+      outline-offset: 2px;
+    }
+
+    @media (max-width: 768px) {
+      .footer-top { grid-template-columns: 1fr 1fr; }
+      .footer-brand { grid-column: 1 / -1; }
+    }
+    @media (max-width: 480px) {
+      .footer-top { grid-template-columns: 1fr; }
+    }
+
+    /* ============================================================
+       ΕΦΑΡΜΟΓΗ ΑΠΟΚΑΛΥΨΗΣ ΜΕ ΚΥΛΙΣΗ
+    ============================================================ */
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    .reveal.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .reveal-delay-1 { transition-delay: 0.1s; }
+    .reveal-delay-2 { transition-delay: 0.2s; }
+    .reveal-delay-3 { transition-delay: 0.3s; }
+
+    /* ============================================================
+       ΔΙΑΦΟΡΑ ΒΟΗΘΗΤΙΚΑ
+    ============================================================ */
+    .text-muted { color: var(--color-text-muted); }
+    .mt-1 { margin-top: 0.5rem; }
+    .mt-2 { margin-top: 1rem; }
+    .mt-3 { margin-top: 1.5rem; }
+    .mt-4 { margin-top: 2rem; }
+
+    .flex-wrap-gap {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+    }
+
+    /* Υπερχείλιση καρτελών σε κινητά */
+    @media (max-width: 600px) {
+      .tab-list {
+        overflow-x: auto;
+        scrollbar-width: none;
+        flex-wrap: nowrap;
+        -webkit-overflow-scrolling: touch;
+      }
+      .tab-list::-webkit-scrollbar { display: none; }
+    }
+
+    /* ============================================================
+    ΔΙΟΡΘΩΣΗ ΚΕΦΑΛΙΔΑΣ — πολύ στενές οθόνες (≤ 420px)
+    Αποτρέπει οριζόντια υπερχείλιση με αναδίπλωση των στοιχείων ελέγχου
+    ============================================================ */
+    @media (max-width: 420px) {
+      :root {
+        --header-h: 112px; /* Χώρος για δύο γραμμές */
+      }
+
+      .header-inner {
+        flex-wrap: wrap;
+        align-content: center;
+        gap: 0.5rem 0;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+        height: auto;
+        min-height: var(--header-h);
+      }
+
+      .logo {
+        flex: 1 1 auto; /* Λογότυπο αριστερά, καταλαμβάνει τον υπόλοιπο χώρο */
+      }
+
+      /* Το χαμπουργκέρ παραμένει δεξιά δίπλα στο λογότυπο */
+      .menu-toggle {
+        flex: 0 0 auto;
+      }
+
+      /* Τα στοιχεία ελέγχου αναδιπλώνονται στη δεύτερη γραμμή */
+      .header-controls {
+        flex: 0 0 100%;    /* πλήρες πλάτος = νέα γραμμή */
+        justify-content: flex-end;
+        padding-bottom: 0.25rem;
+      }
+
+      /* Το κινητό μενού ξεκινά κάτω από την υψηλότερη κεφαλίδα */
+      .mobile-nav {
+        top: var(--header-h);
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ===== ΣΥΝΔΕΣΜΟΣ ΠΑΡΑΒΛΕΨΗΣ ===== -->
+<a class="skip-link" href="#main-content">Μετάβαση στο κύριο περιεχόμενο</a>
+
+<!-- ===== ΚΕΦΑΛΙΔΑ ===== -->
+<header class="site-header" role="banner" id="site-header">
+  <div class="header-inner">
+    <a href="/el/" class="logo" aria-label="Palestine Now — Αρχική">
+      <span class="logo-icon" aria-hidden="true">🕊️</span>
+      Palestine<span class="logo-accent">Now</span>
+    </a>
+
+    <nav class="main-nav" aria-label="Κύρια πλοήγηση">
+      <a href="#about" class="nav-link">Αποστολή</a>
+      <a href="#context" class="nav-link">Πλαίσιο</a>
+      <a href="#act" class="nav-link">Δράσε</a>
+      <a href="#faq" class="nav-link">Ερωτήσεις</a>
+      <a href="#resources" class="nav-link">Πηγές</a>
+    </nav>
+
+    <div class="header-controls">
+      <!-- Σύνδεσμος GitHub -->
+      <a href="https://github.com/YOUR-USERNAME/YOUR-REPO" target="_blank" rel="noopener noreferrer" class="github-link" aria-label="Προβολή στο GitHub — προτείνετε διορθώσεις ή βελτιώσεις">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.477 2 2 6.484 2 12.021c0 4.428 2.865 8.185 6.839 9.504.5.092.682-.217.682-.482 0-.237-.009-.868-.013-1.703-2.782.605-3.369-1.342-3.369-1.342-.454-1.156-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.026 2.747-1.026.546 1.378.202 2.397.1 2.65.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.942.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.203 22 16.447 22 12.021 22 6.484 17.523 2 12 2z"/></svg>
+      </a>
+
+      <!-- Εναλλαγή θέματος -->
+      <button class="theme-toggle" id="themeToggle" aria-label="Εναλλαγή σκοτεινής/ανοιχτής λειτουργίας">
+        <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+      </button>
+
+      <!-- Επιλογέας γλώσσας -->
+      <div class="lang-switcher" id="langSwitcher">
+        <button class="lang-btn" id="langBtn" aria-expanded="false" aria-haspopup="listbox" aria-controls="langDropdown" aria-label="Επιλογή γλώσσας">
+          <span class="lang-label">ΕΛ</span>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="lang-dropdown" id="langDropdown" role="listbox" aria-label="Επιλογές γλώσσας">
+          <a href="/" role="option">English <span class="lang-native">Αγγλικά</span></a>
+          <a href="/de/" role="option">Deutsch <span class="lang-native">Γερμανικά</span></a>
+          <a href="/tr/" role="option">Türkçe <span class="lang-native">Τουρκικά</span></a>
+          <a href="/ar/" role="option">العربية <span class="lang-native">Αραβικά</span></a>
+          <a href="/ru/" role="option">Русский <span class="lang-native">Ρωσικά</span></a>
+          <a href="/el/" class="active" role="option" aria-selected="true">Ελληνικά <span class="lang-native">Greek</span></a>
+          <a href="/zh/" role="option">中文 <span class="lang-native">Κινεζικά</span></a>
+          <a href="/fr/" role="option">Français <span class="lang-native">Γαλλικά</span></a>
+          <a href="/es/" role="option">Español <span class="lang-native">Ισπανικά</span></a>
+          <a href="/pt/" role="option">Português <span class="lang-native">Πορτογαλικά</span></a>
+          <a href="/fa/" role="option">فارسی <span class="lang-native">Φαρσί</span></a>
+          <a href="/ur/" role="option">اردو <span class="lang-native">Ουρντού</span></a>
+        </div>
+      </div>
+
+      <!-- Κινητό χαμπουργκέρ -->
+      <button class="menu-toggle" id="menuToggle" aria-label="Εναλλαγή κινητού μενού" aria-expanded="false" aria-controls="mobileNav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- Κινητό μενού πλοήγησης -->
+<nav class="mobile-nav" id="mobileNav" aria-label="Κινητή πλοήγηση">
+  <a href="#about">Αποστολή</a>
+  <a href="#context">Πλαίσιο</a>
+  <a href="#act">Δράσε</a>
+  <a href="#faq">Ερωτήσεις</a>
+  <a href="#resources">Πηγές</a>
+</nav>
+
+<!-- ===== ΚΥΡΙΟ ΠΕΡΙΕΧΟΜΕΝΟ ===== -->
+<main id="main-content">
+
+  <!-- ===== ΗΡΩΑΣ ===== -->
+  <section id="hero" aria-labelledby="hero-heading">
+    <div class="hero-bg" aria-hidden="true"></div>
+
+    <!-- Μοτίβο παλαιστινιακής σημαίας (διακοσμητικό) -->
+    <div class="hero-flag" aria-hidden="true">
+      <div class="hero-flag-stripe black"></div>
+      <div class="hero-flag-stripe white"></div>
+      <div class="hero-flag-stripe green"></div>
+      <div class="hero-flag-triangle"></div>
+    </div>
+
+    <div class="hero-content">
+      <span class="hero-kicker">Αλληλεγγύη στην Παλαιστίνη</span>
+      <h1 class="hero-headline" id="hero-heading">
+        Η Δικαιοσύνη<br>Δεν Έχει
+        <span class="accent-line">Σύνορα.</span>
+      </h1>
+      <p class="hero-subline">
+        Σταθείτε με την Παλαιστίνη. Μάθετε, δράστε, δωρίστε και ενισχύστε. Κάθε φωνή μετράει. Η σιωπή δεν είναι ουδετερότητα — είναι επιλογή.
+      </p>
+      <div class="hero-ctas">
+        <a href="#act" class="btn btn-primary">
+          Δράσε Τώρα ↓
+        </a>
+        <a href="#about" class="btn btn-outline-white">
+          Μάθε Περισσότερα ↓
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Διαχωριστικό ριγέ -->
+  <div class="stripe-divider" aria-hidden="true">
+    <div class="s1"></div><div class="s2"></div><div class="s3"></div><div class="s4"></div>
+  </div>
+
+  <!-- ===== ΣΧΕΤΙΚΑ / ΑΠΟΣΤΟΛΗ ===== -->
+  <section id="about" class="section-pad" aria-labelledby="about-heading">
+    <div class="container">
+      <span class="section-label reveal">Ποιοι Είμαστε</span>
+      <h2 class="section-title reveal" id="about-heading">Γιατί η Αλληλεγγύη<br>Έχει Σημασία</h2>
+
+      <div class="mission-grid">
+        <div class="mission-intro reveal reveal-delay-1">
+          <p>
+            Το Palestine Now είναι μια ανεξάρτητη, αμερόληπτη πλατφόρμα που δημιουργήθηκε για να εκπαιδεύει, να συνδέει και να κινητοποιεί ανθρώπους συνείδησης σε όλο τον κόσμο. Πιστεύουμε ότι η δικαιοσύνη είναι καθολική — όταν ένας λαός στερείται τα θεμελιώδη δικαιώματά του, η σιωπή της διεθνούς κοινότητας είναι συνενοχή.
+          </p>
+          <p>
+            Ο παλαιστινιακός λαός ζει υπό κατοχή, αποκλεισμό και αποστέρηση εδώ και πάνω από 75 χρόνια. Η κατάσταση έχει τεκμηριωθεί και καταδικαστεί από τα Ηνωμένα Έθνη, το Διεθνές Δικαστήριο, την Amnesty International, την Human Rights Watch και το B'Tselem. Αυτό δεν είναι πολιτική γνώμη — είναι τεκμηριωμένη ανθρωπιστική πραγματικότητα.
+          </p>
+          <p>
+            Δεν υποστηρίζουμε καμία ένοπλη ομάδα ή πολιτικό κόμμα. Υποστηρίζουμε τα ανθρώπινα δικαιώματα, το διεθνές δίκαιο και την αναφαίρετη αξιοπρέπεια κάθε ανθρώπου ανεξαρτήτως καταγωγής.
+          </p>
+        </div>
+
+        <div class="mission-cards">
+          <article class="mission-card reveal reveal-delay-1">
+            <div class="mission-icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </div>
+            <div>
+              <h3>Αλληλεγγύη</h3>
+              <p>Η αλληλεγγύη δεν είναι φιλανθρωπία — είναι η αναγνώριση ότι οι αγώνες μας συνδέονται. Όταν σταθούμε μαζί, είμαστε πιο δυνατοί.</p>
+            </div>
+          </article>
+
+          <article class="mission-card reveal reveal-delay-2">
+            <div class="mission-icon green" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <div>
+              <h3>Δικαιοσύνη &amp; Διεθνές Δίκαιο</h3>
+              <p>Το Ψήφισμα 242 του ΟΗΕ, η Τέταρτη Σύμβαση της Γενεύης και οι αποφάσεις του ΔΔ επιβεβαιώνουν τα παλαιστινιακά δικαιώματα. Βρισκόμαστε στο πλευρό του νόμου.</p>
+            </div>
+          </article>
+
+          <article class="mission-card reveal reveal-delay-3">
+            <div class="mission-icon dark" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+            </div>
+            <div>
+              <h3>Ειρηνική Αντίσταση</h3>
+              <p>Υποστηρίζουμε ειρηνικές, νόμιμες μορφές αντίστασης: μποϊκοτάζ, εκπαίδευση, διαδηλώσεις και δημοκρατική υπεράσπιση. Η βία δεν είναι ο δρόμος μας.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <div class="disclaimer-box reveal">
+        <strong>Σημείωση Ανεξαρτησίας:</strong> Αυτός ο ιστότοπος είναι πολιτικά ανεξάρτητος και δεν εκπροσωπεί καμία ένοπλη οργάνωση, πολιτικό κόμμα ή κυβέρνηση. Όλο το περιεχόμενο βασίζεται σε τεκμηριωμένες πηγές από διεθνείς οργανισμούς ανθρωπίνων δικαιωμάτων και φορείς των Ηνωμένων Εθνών.
+      </div>
+    </div>
+  </section>
+
+  <!-- Διαχωριστικό ριγέ -->
+  <div class="stripe-divider" aria-hidden="true">
+    <div class="s4"></div><div class="s3"></div><div class="s2"></div><div class="s1"></div>
+  </div>
+
+  <!-- ===== ΠΛΑΙΣΙΟ ===== -->
+  <section id="context" class="section-pad" aria-labelledby="context-heading">
+    <div class="container">
+      <span class="section-label">Τα Γεγονότα</span>
+      <h2 class="section-title reveal" id="context-heading">Τι<br>Συμβαίνει</h2>
+
+      <div class="stats-grid reveal">
+        <div class="stat-card">
+          <span class="stat-number">2,3 εκ.</span>
+          <span class="stat-label">Άνθρωποι στη Γάζα</span>
+          <span class="stat-source">UNRWA, 2024</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-number">75+</span>
+          <span class="stat-label">Χρόνια Κατοχής</span>
+          <span class="stat-source">Από το 1948</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-number">700 χιλ.+</span>
+          <span class="stat-label">Πρόσφυγες το 1948</span>
+          <span class="stat-source">ΟΗΕ, Νάκμπα</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-number">800+</span>
+          <span class="stat-label">Ψηφίσματα ΟΗΕ</span>
+          <span class="stat-source">Ηνωμένα Έθνη</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-number">5,9 εκ.</span>
+          <span class="stat-label">Καταγεγραμμένοι Πρόσφυγες</span>
+          <span class="stat-source">UNRWA, 2024</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-number">15+</span>
+          <span class="stat-label">Χρόνια Αποκλεισμού Γάζας</span>
+          <span class="stat-source">Από το 2007</span>
+        </div>
+      </div>
+
+      <div class="timeline-wrap reveal">
+        <p class="timeline-title">Βασικές ιστορικές στιγμές</p>
+        <div class="timeline" role="list">
+          <div class="timeline-item" role="listitem">
+            <span class="timeline-year">1948</span>
+            <span class="timeline-event">Νάκμπα — πάνω από 700.000 Παλαιστίνιοι εκτοπίστηκαν. Ανακηρύχθηκε το κράτος του Ισραήλ.</span>
+          </div>
+          <div class="timeline-item" role="listitem">
+            <span class="timeline-year">1967</span>
+            <span class="timeline-event">Πόλεμος των Έξι Ημερών. Το Ισραήλ κατέχει Γάζα, Δυτική Όχθη και Ανατολική Ιερουσαλήμ.</span>
+          </div>
+          <div class="timeline-item" role="listitem">
+            <span class="timeline-year">1993</span>
+            <span class="timeline-event">Υπογράφηκαν οι Συμφωνίες του Όσλο. Καθιερώθηκε το πλαίσιο δύο κρατών αλλά δεν εκπληρώθηκε.</span>
+          </div>
+          <div class="timeline-item" role="listitem">
+            <span class="timeline-year">2007</span>
+            <span class="timeline-event">Επιβλήθηκε αποκλεισμός της Γάζας από Ισραήλ και Αίγυπτο. 2,3 εκατ. άνθρωποι υπό πολιορκία.</span>
+          </div>
+          <div class="timeline-item" role="listitem">
+            <span class="timeline-year">2023 – σήμερα</span>
+            <span class="timeline-event">Καταστροφική στρατιωτική κλιμάκωση στη Γάζα. Ανθρωπιστική καταστροφή τεκμηριωμένη από υπηρεσίες του ΟΗΕ.</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="context-sources reveal">
+        Πηγές:
+        <a href="https://www.unrwa.org" target="_blank" rel="noopener noreferrer">UNRWA</a> ·
+        <a href="https://www.amnesty.org" target="_blank" rel="noopener noreferrer">Amnesty International</a> ·
+        <a href="https://www.hrw.org" target="_blank" rel="noopener noreferrer">Human Rights Watch</a> ·
+        <a href="https://www.un.org/unispal" target="_blank" rel="noopener noreferrer">UN ISPAL</a> ·
+        <a href="https://www.icj-cij.org" target="_blank" rel="noopener noreferrer">Διεθνές Δικαστήριο</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Διαχωριστικό ριγέ -->
+  <div class="stripe-divider" aria-hidden="true">
+    <div class="s2"></div><div class="s1"></div><div class="s4"></div><div class="s3"></div>
+  </div>
+
+  <!-- ===== ΔΡΑΣΗ ===== -->
+  <section id="act" class="section-pad" aria-labelledby="act-heading">
+    <div class="container">
+      <span class="section-label reveal">Συμμετέχετε</span>
+      <h2 class="section-title reveal" id="act-heading">Δράστε<br>Σήμερα</h2>
+      <p class="reveal" style="max-width:620px; color:var(--color-text-muted); margin-bottom:0;">
+        Υπάρχουν πολλοί τρόποι να συνεισφέρετε — είτε έχετε πέντε λεπτά είτε μια ζωή δέσμευση. Επιλέξτε από πού να ξεκινήσετε.
+      </p>
+
+      <div class="tabs-wrap">
+        <ul class="tab-list" role="tablist" aria-label="Κατηγορίες δράσης">
+          <li role="presentation"><button class="tab-btn" role="tab" aria-selected="true" aria-controls="tab-boycott" id="tab-btn-boycott">Μποϊκοτάζ</button></li>
+          <li role="presentation"><button class="tab-btn" role="tab" aria-selected="false" aria-controls="tab-donate" id="tab-btn-donate">Δωρεά</button></li>
+          <li role="presentation"><button class="tab-btn" role="tab" aria-selected="false" aria-controls="tab-amplify" id="tab-btn-amplify">Ενίσχυση</button></li>
+          <li role="presentation"><button class="tab-btn" role="tab" aria-selected="false" aria-controls="tab-contact" id="tab-btn-contact">Επικοινωνία</button></li>
+          <li role="presentation"><button class="tab-btn" role="tab" aria-selected="false" aria-controls="tab-protest" id="tab-btn-protest">Διαδήλωση</button></li>
+          <li role="presentation"><button class="tab-btn" role="tab" aria-selected="false" aria-controls="tab-educate" id="tab-btn-educate">Εκπαίδευση</button></li>
+        </ul>
+
+        <!-- ΜΠΟΪΚΟΤΑΖ -->
+        <div class="tab-panel active" id="tab-boycott" role="tabpanel" aria-labelledby="tab-btn-boycott">
+          <p class="boycott-intro">
+            Το κίνημα Μποϊκοτάζ, Αποεπένδυσης και Κυρώσεων (BDS) είναι μια παλαιστινιακή, μη βίαιη εκστρατεία για τα δικαιώματα των Παλαιστινίων. Το καταναλωτικό μποϊκοτάζ είναι μια νόμιμη, προστατευόμενη μορφή πολιτικής έκφρασης στην ΕΕ, τη Γερμανία, τις ΗΠΑ και τις περισσότερες δημοκρατίες.
+          </p>
+
+          <div class="boycott-categories">
+            <div class="boycott-cat">
+              <h4>Τεχνολογία</h4>
+              <ul class="boycott-list">
+                <li>HP (βασικός ρόλος στην καταπίεση του Ισραήλ)</li>
+                <li>Intel (σημαντικές δραστηριότητες στο Ισραήλ)</li>
+                <li>AnyVision (αναγνώριση προσώπου)</li>
+                <li>Elbit Systems (drones, επιτήρηση)</li>
+              </ul>
+            </div>
+            <div class="boycott-cat">
+              <h4>Καταναλωτικά Αγαθά</h4>
+              <ul class="boycott-list">
+                <li>SodaStream (παράγεται σε εποικισμούς)</li>
+                <li>Sabra Hummus (εταιρική σχέση με IDF)</li>
+                <li>Ahava (προϊόντα εποικισμών)</li>
+                <li>Osem / Nestlé (μερική ιδιοκτησία)</li>
+              </ul>
+            </div>
+            <div class="boycott-cat">
+              <h4>Λιανική &amp; Υπηρεσίες</h4>
+              <ul class="boycott-list">
+                <li>Reebok (χορηγός ισραηλινού ποδοσφαίρου)</li>
+                <li>McDonald's Israel (δώρισε γεύματα)</li>
+                <li>Booking.com (καταχωρεί ξενοδοχεία σε εποικισμούς)</li>
+                <li>Airbnb (καταχωρήσεις σε εποικισμούς)</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="boycott-note">
+            <strong>Κάντε έρευνα.</strong> Οι λίστες αλλάζουν τακτικά. Επαληθεύστε πριν δράσετε στο <a href="https://bdsmovement.net" target="_blank" rel="noopener noreferrer">bdsmovement.net</a>. Το μποϊκοτάζ είναι προσωπική επιλογή — πληροφορία, όχι πίεση.
+          </div>
+        </div>
+
+        <!-- ΔΩΡΕΑ -->
+        <div class="tab-panel" id="tab-donate" role="tabpanel" aria-labelledby="tab-btn-donate">
+          <p class="boycott-intro">
+            Επαληθευμένοι ανθρωπιστικοί οργανισμοί που δραστηριοποιούνται στη Γάζα και την Παλαιστίνη. Κάντε πάντα δωρεά απευθείας μέσω των επίσημων ιστοτόπων.
+          </p>
+          <div class="donate-grid">
+            <article class="org-card">
+              <h3 class="org-card-name">UNRWA</h3>
+              <p class="org-card-desc">Η Υπηρεσία Αρωγής και Έργων των Ηνωμένων Εθνών — ο κύριος φορέας του ΟΗΕ που παρέχει επείγουσα βοήθεια, τρόφιμα, ιατρικές υπηρεσίες και εκπαίδευση στους Παλαιστίνιους πρόσφυγες.</p>
+              <a href="https://www.unrwa.org/donate" target="_blank" rel="noopener noreferrer" class="btn btn-green btn-sm">Δωρίστε → unrwa.org</a>
+            </article>
+            <article class="org-card">
+              <h3 class="org-card-name">MSF / Médecins Sans Frontières</h3>
+              <p class="org-card-desc">Γιατροί Χωρίς Σύνορα — παρέχουν επείγουσα ιατρική περίθαλψη στη Γάζα και σε ολόκληρη την περιοχή, λειτουργώντας ανεξάρτητα από όλες τις πολιτικές παρατάξεις.</p>
+              <a href="https://www.msf.org" target="_blank" rel="noopener noreferrer" class="btn btn-green btn-sm">Δωρίστε → msf.org</a>
+            </article>
+            <article class="org-card">
+              <h3 class="org-card-name">MAP — Ιατρική Βοήθεια για Παλαιστίνιους</h3>
+              <p class="org-card-desc">Παρέχει ιατρική βοήθεια και στηρίζει την υγειονομική περίθαλψη για Παλαιστίνιους στη Γάζα, τη Δυτική Όχθη και σε προσφυγικά στρατόπεδα στον Λίβανο και την Ιορδανία.</p>
+              <a href="https://www.map.org.uk" target="_blank" rel="noopener noreferrer" class="btn btn-green btn-sm">Δωρίστε → map.org.uk</a>
+            </article>
+            <article class="org-card">
+              <h3 class="org-card-name">Ταμείο Ανακούφισης Παλαιστινίων Παιδιών</h3>
+              <p class="org-card-desc">Το PCRF στέλνει άρρωστα και τραυματισμένα παλαιστινιακά παιδιά στο εξωτερικό για ιατρική φροντίδα που δεν είναι διαθέσιμη στην περιοχή τους.</p>
+              <a href="https://www.pcrf.net" target="_blank" rel="noopener noreferrer" class="btn btn-green btn-sm">Δωρίστε → pcrf.net</a>
+            </article>
+            <article class="org-card">
+              <h3 class="org-card-name">Islamic Relief</h3>
+              <p class="org-card-desc">Διεθνής ανθρωπιστικός οργανισμός που παρέχει τρόφιμα, νερό, στέγη και ιατρική φροντίδα στη Γάζα και αλλού, ανεξαρτήτως θρησκείας.</p>
+              <a href="https://www.islamic-relief.org" target="_blank" rel="noopener noreferrer" class="btn btn-green btn-sm">Δωρίστε → islamic-relief.org</a>
+            </article>
+            <article class="org-card">
+              <h3 class="org-card-name">Anera</h3>
+              <p class="org-card-desc">Αμερικανική Βοήθεια για Πρόσφυγες Εγγύς Ανατολής — παρέχει τρόφιμα, φάρμακα και προγράμματα μακροπρόθεσμης ανάπτυξης σε Παλαιστίνη, Λίβανο και Ιορδανία.</p>
+              <a href="https://www.anera.org" target="_blank" rel="noopener noreferrer" class="btn btn-green btn-sm">Δωρίστε → anera.org</a>
+            </article>
+          </div>
+        </div>
+
+        <!-- ΕΝΙΣΧΥΣΗ -->
+        <div class="tab-panel" id="tab-amplify" role="tabpanel" aria-labelledby="tab-btn-amplify">
+          <p class="boycott-intro">
+            Η ενίσχυση των παλαιστινιακών φωνών είναι ένα από τα πιο ισχυρά πράγματα που μπορείτε να κάνετε. Μοιραστείτε γεγονότα, αντιμετωπίστε την παραπληροφόρηση και κάντε την Παλαιστίνη ορατή.
+          </p>
+
+          <h3 style="font-family:var(--font-body);font-size:0.75rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--color-text-muted);margin-bottom:.75rem;">Χρησιμοποιήστε αυτά τα hashtag</h3>
+          <div class="hashtag-cloud" aria-label="Hashtag εκστρατείας — κάντε κλικ για αντιγραφή">
+            <button class="hashtag" onclick="copyHashtag(this,'#FreePalestine')" aria-label="Αντιγραφή #FreePalestine">#FreePalestine<svg class="hashtag-copy-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg></button>
+            <button class="hashtag" onclick="copyHashtag(this,'#CeasefireNow')" aria-label="Αντιγραφή #CeasefireNow">#CeasefireNow<svg class="hashtag-copy-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg></button>
+            <button class="hashtag" onclick="copyHashtag(this,'#GazaGenocide')" aria-label="Αντιγραφή #GazaGenocide">#GazaGenocide<svg class="hashtag-copy-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg></button>
+            <button class="hashtag" onclick="copyHashtag(this,'#StandWithPalestine')" aria-label="Αντιγραφή #StandWithPalestine">#StandWithPalestine<svg class="hashtag-copy-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg></button>
+            <button class="hashtag" onclick="copyHashtag(this,'#EndTheOccupation')" aria-label="Αντιγραφή #EndTheOccupation">#EndTheOccupation<svg class="hashtag-copy-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg></button>
+            <button class="hashtag" onclick="copyHashtag(this,'#PalestineWillBeFree')" aria-label="Αντιγραφή #PalestineWillBeFree">#PalestineWillBeFree<svg class="hashtag-copy-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg></button>
+            <button class="hashtag" onclick="copyHashtag(this,'#BDS')" aria-label="Αντιγραφή #BDS">#BDS<svg class="hashtag-copy-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg></button>
+            <button class="hashtag" onclick="copyHashtag(this,'#SaveGaza')" aria-label="Αντιγραφή #SaveGaza">#SaveGaza<svg class="hashtag-copy-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg></button>
+          </div>
+          <p class="hashtag-hint" aria-live="polite">
+            <svg style="width:11px;height:11px;flex-shrink:0;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+            Κάντε κλικ σε οποιοδήποτε hashtag για να το αντιγράψετε στο πρόχειρό σας.
+          </p>
+
+          <h3 style="font-family:var(--font-body);font-size:0.75rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--color-text-muted);margin:2rem 0 .75rem;">Ακολουθήστε &amp; μοιραστείτε αυτά τα μέσα</h3>
+          <div class="boycott-categories">
+            <div class="boycott-cat">
+              <h4>Δημοσιογραφία</h4>
+              <ul class="boycott-list">
+                <li><a href="https://www.972mag.com" target="_blank" rel="noopener noreferrer">+972 Magazine</a></li>
+                <li><a href="https://electronicintifada.net" target="_blank" rel="noopener noreferrer">Electronic Intifada</a></li>
+                <li><a href="https://www.aljazeera.com/where/palestine" target="_blank" rel="noopener noreferrer">Al Jazeera English</a></li>
+                <li><a href="https://mondoweiss.net" target="_blank" rel="noopener noreferrer">Mondoweiss</a></li>
+              </ul>
+            </div>
+            <div class="boycott-cat">
+              <h4>Εκπαίδευση</h4>
+              <ul class="boycott-list">
+                <li><a href="https://decolonizepalestine.com" target="_blank" rel="noopener noreferrer">Decolonize Palestine</a></li>
+                <li><a href="https://www.palestineportal.org" target="_blank" rel="noopener noreferrer">Palestine Portal</a></li>
+                <li><a href="https://palestineremembered.com" target="_blank" rel="noopener noreferrer">Palestine Remembered</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- ΕΠΙΚΟΙΝΩΝΙΑ -->
+        <div class="tab-panel" id="tab-contact" role="tabpanel" aria-labelledby="tab-btn-contact">
+          <p class="boycott-intro">
+            Η επικοινωνία με τους εκλεγμένους εκπροσώπους σας είναι μία από τις πιο αποτελεσματικές μορφές δημοκρατικής δράσης. Οι πολιτικοί ανταποκρίνονται στην πίεση των ψηφοφόρων — ειδικά όταν τα γράμματα είναι προσωπικά, τεκμηριωμένα και σεβαστά.
+          </p>
+
+          <h3 style="font-size:1rem;margin-bottom:1rem;font-family:var(--font-display);">Πρότυπο Email — Κατάπαυση Πυρός &amp; Ανθρωπιστική Πρόσβαση</h3>
+          <div class="email-template-wrap">
+            <textarea id="emailTemplate" aria-label="Πρότυπο email για αντιγραφή" readonly>Θέμα: Επείγον: Αίτημα για Άμεση Κατάπαυση Πυρός και Ανθρωπιστική Πρόσβαση στη Γάζα
+
+Αξιότιμε/η [Όνομα Εκπροσώπου],
+
+Σας γράφω ως ψηφοφόρος βαθιά ανησυχημένος/η για την ανθρωπιστική κατάσταση στη Γάζα, όπου πάνω από 2,3 εκατομμύρια άμαχοι αντιμετωπίζουν αυτό που οι υπηρεσίες των Ηνωμένων Εθνών χαρακτηρίζουν καταστροφική ανθρωπιστική κρίση.
+
+Σας παρακαλώ να:
+
+1. Ζητήσετε δημοσίως άμεση και μόνιμη κατάπαυση πυρός στη Γάζα
+2. Υποστηρίξετε την ανεμπόδιστη παράδοση ανθρωπιστικής βοήθειας (τρόφιμα, νερό, φάρμακα)
+3. Υποστηρίξετε την εφαρμογή του διεθνούς ανθρωπιστικού δικαίου σε όλα τα μέρη
+4. Υποστηρίξετε μηχανισμούς λογοδοσίας για τεκμηριωμένες παραβιάσεις του διεθνούς δικαίου
+
+Το Διεθνές Δικαστήριο, η Amnesty International, η Human Rights Watch και η UNRWA έχουν όλοι εκδώσει επείγουσες προειδοποιήσεις. Ως εκπρόσωπός μου σε μια δημοκρατία που ισχυρίζεται ότι υποστηρίζει τα ανθρώπινα δικαιώματα και το διεθνές δίκαιο, σας ζητώ να ενεργήσετε σύμφωνα με αυτές τις αξίες.
+
+Αναμένω την απάντησή σας και να μάθω ποια συγκεκριμένα βήματα θα λάβετε.
+
+Με εκτίμηση,
+[Το Όνομά σας]
+[Η Διεύθυνσή σας]
+[Πόλη, Χώρα]</textarea>
+          </div>
+          <div class="flex-wrap-gap mt-2" style="align-items:center;">
+            <button class="btn btn-primary btn-sm" id="copyEmailBtn" onclick="copyEmailTemplate()">Αντιγραφή Προτύπου</button>
+            <span class="copy-feedback" id="copyFeedback" aria-live="polite">✓ Αντιγράφηκε στο πρόχειρο!</span>
+          </div>
+
+          <h3 style="font-size:0.85rem;font-family:var(--font-body);font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--color-text-muted);margin:2rem 0 .75rem;">Βρείτε τον εκπρόσωπό σας</h3>
+          <div class="rep-links">
+            <a href="https://www.writetothem.com" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">🇬🇧 WriteToThem (ΗΒ)</a>
+            <a href="https://www.bundestag.de/abgeordnete" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">🇩🇪 Bundestag (ΓΕ)</a>
+            <a href="https://www.congress.gov/contact-us" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">🇺🇸 Κογκρέσο (ΗΠΑ)</a>
+            <a href="https://www.europarl.europa.eu/meps/en/home" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">🇪🇺 Ευρωπαϊκό Κοινοβούλιο</a>
+            <a href="https://petitions.bundestag.de" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">🇩🇪 Αιτήσεις Bundestag</a>
+          </div>
+        </div>
+
+        <!-- ΔΙΑΔΗΛΩΣΗ -->
+        <div class="tab-panel" id="tab-protest" role="tabpanel" aria-labelledby="tab-btn-protest">
+          <p class="boycott-intro">
+            Οι δημόσιες διαδηλώσεις παραμένουν μία από τις πιο ορατές και αποτελεσματικές μορφές αλληλεγγύης. Βρείτε μια ομάδα κοντά σας ή ξεκινήστε μια. Η ειρηνική διαδήλωση είναι θεμελιώδες δικαίωμα.
+          </p>
+
+          <div class="protest-orgs">
+            <div class="protest-org-card">
+              <div class="country">🇬🇧 Ηνωμένο Βασίλειο</div>
+              <h4>Palestine Solidarity Campaign</h4>
+              <p style="font-size:.84rem;color:var(--color-text-muted);">Ο μεγαλύτερος οργανισμός παλαιστινιακής αλληλεγγύης στο ΗΒ, που οργανώνει εθνικές πορείες και τοπικές εκδηλώσεις.</p>
+              <a href="https://www.palestinecampaign.org" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm mt-2">Επισκεφθείτε PSC</a>
+            </div>
+            <div class="protest-org-card">
+              <div class="country">🇺🇸 Ηνωμένες Πολιτείες</div>
+              <h4>Jewish Voice for Peace</h4>
+              <p style="font-size:.84rem;color:var(--color-text-muted);">Εθνική αμερικανική εβραϊκή οργάνωση που ηγείται εκστρατειών για τα δικαιώματα των Παλαιστινίων και δίκαιη ειρήνη.</p>
+              <a href="https://www.jewishvoiceforpeace.org" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm mt-2">Επισκεφθείτε JVP</a>
+            </div>
+            <div class="protest-org-card">
+              <div class="country">🇩🇪 Γερμανία</div>
+              <h4>BDS Germany</h4>
+              <p style="font-size:.84rem;color:var(--color-text-muted);">Γερμανικό δίκτυο που συντονίζει εκστρατείες μποϊκοτάζ και δράσεις αλληλεγγύης. Ενημερωθείτε για την τοπική νομοθεσία πριν δράσετε.</p>
+              <a href="https://bds-kampagne.de" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm mt-2">Επισκεφθείτε BDS DE</a>
+            </div>
+            <div class="protest-org-card">
+              <div class="country">🌍 Διεθνές</div>
+              <h4>IJAN — Διεθνές Εβραϊκό Αντι-Σιωνιστικό Δίκτυο</h4>
+              <p style="font-size:.84rem;color:var(--color-text-muted);">Παγκόσμιο δίκτυο Εβραίων που δεσμεύονται για δικαιοσύνη στην Παλαιστίνη, με κεφάλαια σε όλο τον κόσμο.</p>
+              <a href="https://www.ijan.org" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm mt-2">Επισκεφθείτε IJAN</a>
+            </div>
+          </div>
+
+          <div class="boycott-note mt-4">
+            <strong>Γνωρίστε τα δικαιώματά σας.</strong> Οι νόμοι για τις διαδηλώσεις διαφέρουν ανά χώρα. Ελέγξτε πάντα τους τοπικούς κανονισμούς, τις απαιτήσεις για άδεια και τα νόμιμα δικαιώματά σας πριν οργανώσετε ή συμμετάσχετε σε μια διαδήλωση.
+          </div>
+        </div>
+
+        <!-- ΕΚΠΑΙΔΕΥΣΗ -->
+        <div class="tab-panel" id="tab-educate" role="tabpanel" aria-labelledby="tab-btn-educate">
+          <p class="boycott-intro">
+            Η κατανόηση της ιστορίας και του πλαισίου της Παλαιστίνης είναι απαραίτητη για ουσιαστική αλληλεγγύη. Ξεκινήστε εδώ.
+          </p>
+          <div class="edu-columns">
+            <div class="edu-col">
+              <h4>Βιβλία</h4>
+              <div class="edu-item">
+                <span class="edu-item-title">The Ethnic Cleansing of Palestine</span>
+                <span class="edu-item-author">Ilan Pappé — Επιστημονική ιστορία της Νάκμπα του 1948</span>
+              </div>
+              <div class="edu-item">
+                <span class="edu-item-title">Gaza: An Inquest into Its Martyrdom</span>
+                <span class="edu-item-author">Norman G. Finkelstein — Λεπτομερής νομική και ιστορική ανάλυση</span>
+              </div>
+              <div class="edu-item">
+                <span class="edu-item-title">On Palestine</span>
+                <span class="edu-item-author">Noam Chomsky &amp; Ilan Pappé — Διάλογοι για ιστορία και πολιτική</span>
+              </div>
+              <div class="edu-item">
+                <span class="edu-item-title">The Question of Palestine</span>
+                <span class="edu-item-author">Edward W. Said — Θεμελιώδες κείμενο για την παλαιστινιακή ταυτότητα</span>
+              </div>
+              <div class="edu-item">
+                <span class="edu-item-title">Palestine: A Four Thousand Year History</span>
+                <span class="edu-item-author">Nur Masalha — Βαθιές ιστορικές ρίζες της Παλαιστίνης</span>
+              </div>
+            </div>
+            <div class="edu-col">
+              <h4>Ντοκιμαντέρ</h4>
+              <div class="edu-item">
+                <span class="edu-item-title">Jenin, Jenin (2002)</span>
+                <span class="edu-item-author">Mohamed Bakri — Παλαιστινιακές μαρτυρίες από τον καταυλισμό Τζενίν</span>
+              </div>
+              <div class="edu-item">
+                <span class="edu-item-title">The Occupation of the American Mind</span>
+                <span class="edu-item-author">Ανάλυση μέσων για την αμερικανική κάλυψη της ισραηλο-παλαιστινιακής σύγκρουσης</span>
+              </div>
+              <div class="edu-item">
+                <span class="edu-item-title">5 Broken Cameras (2011)</span>
+                <span class="edu-item-author">Emad Burnat — Μαρτυρία πρώτου προσώπου από το χωριό Μπιλίν</span>
+              </div>
+              <div class="edu-item">
+                <span class="edu-item-title">The Gate of the Sun (2004)</span>
+                <span class="edu-item-author">Yousry Nasrallah — Επικό πορτρέτο Παλαιστινίων προσφύγων</span>
+              </div>
+            </div>
+            <div class="edu-col">
+              <h4>Μέσα &amp; Έρευνα</h4>
+              <div class="edu-item">
+                <span class="edu-item-title"><a href="https://www.972mag.com" target="_blank" rel="noopener noreferrer">+972 Magazine</a></span>
+                <span class="edu-item-author">Ανεξάρτητη δημοσιογραφία από Ισραηλινούς και Παλαιστίνιους συντάκτες</span>
+              </div>
+              <div class="edu-item">
+                <span class="edu-item-title"><a href="https://electronicintifada.net" target="_blank" rel="noopener noreferrer">Electronic Intifada</a></span>
+                <span class="edu-item-author">Ειδήσεις και ανάλυση από παλαιστινιακή οπτική</span>
+              </div>
+              <div class="edu-item">
+                <span class="edu-item-title"><a href="https://decolonizepalestine.com" target="_blank" rel="noopener noreferrer">Decolonize Palestine</a></span>
+                <span class="edu-item-author">Αποδόμηση μύθων και ιστορικά γεγονότα σε απλή γλώσσα</span>
+              </div>
+              <div class="edu-item">
+                <span class="edu-item-title"><a href="https://www.palestine-studies.org" target="_blank" rel="noopener noreferrer">Ινστιτούτο Παλαιστινιακών Σπουδών</a></span>
+                <span class="edu-item-author">Επιστημονική έρευνα με κριτική αξιολόγηση από το 1963</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div><!-- /tabs-wrap -->
+    </div>
+  </section>
+
+  <!-- Διαχωριστικό ριγέ -->
+  <div class="stripe-divider" aria-hidden="true">
+    <div class="s3"></div><div class="s4"></div><div class="s1"></div><div class="s2"></div>
+  </div>
+
+  <!-- ===== ΣΥΧΝΕΣ ΕΡΩΤΗΣΕΙΣ ===== -->
+  <section id="faq" class="section-pad" aria-labelledby="faq-heading">
+    <div class="container">
+      <span class="section-label reveal">Συνήθεις Ερωτήσεις</span>
+      <h2 class="section-title reveal" id="faq-heading">Συχνές<br>Ερωτήσεις</h2>
+
+      <div class="faq-list reveal" id="faqList">
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false" aria-controls="faq-1">
+            Είναι αντισημιτικός αυτός ο ιστότοπος;
+            <span class="faq-icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            </span>
+          </button>
+          <div class="faq-answer" id="faq-1" role="region">
+            <div class="faq-answer-inner">
+              <p>Όχι. Η κριτική στις πολιτικές και τις πράξεις ενός κράτους — συμπεριλαμβανομένου του Ισραήλ — δεν είναι αντισημιτισμός. Η ταύτιση της κριτικής της ισραηλινής κυβερνητικής πολιτικής με το μίσος κατά του εβραϊκού λαού είναι μια ρητορική τακτική που πολλοί Εβραίοι μελετητές, ακτιβιστές και οργανισμοί απορρίπτουν οι ίδιοι.</p>
+              <p>Αυτός ο ιστότοπος καταδικάζει ρητά τον αντισημιτισμό, την ισλαμοφοβία και κάθε μορφή ρατσισμού. Πολλοί από τους πιο φωνητικούς υποστηρικτές των παλαιστινιακών δικαιωμάτων είναι Εβραίοι — συμπεριλαμβανομένων οργανώσεων όπως το Jewish Voice for Peace και το Διεθνές Εβραϊκό Αντι-Σιωνιστικό Δίκτυο. Τα ανθρώπινα δικαιώματα δεν είναι παιχνίδι μηδενικού αθροίσματος.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false" aria-controls="faq-2">
+            Είναι νόμιμο το μποϊκοτάζ;
+            <span class="faq-icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            </span>
+          </button>
+          <div class="faq-answer" id="faq-2" role="region">
+            <div class="faq-answer-inner">
+              <p>Στις περισσότερες δημοκρατίες, ναι. Το καταναλωτικό μποϊκοτάζ είναι μια προστατευόμενη μορφή πολιτικής έκφρασης στο πλαίσιο της ελευθερίας του λόγου και της ελευθερίας του εμπορίου. Στις Ηνωμένες Πολιτείες, η Πρώτη Τροπολογία προστατεύει τα πολιτικά μποϊκοτάζ. Στην Ευρωπαϊκή Ένωση, το Ευρωπαϊκό Δικαστήριο Ανθρωπίνων Δικαιωμάτων έχει επανειλημμένα επιβεβαιώσει το δικαίωμα στο μποϊκοτάζ.</p>
+              <p>Στη Γερμανία ειδικότερα, η νομική κατάσταση είναι λεπτή. Η έκκληση για μποϊκοτάζ προϊόντων για πολιτικούς λόγους επιτρέπεται γενικά βάσει της Meinungsfreiheit (ελευθερία γνώμης) — αλλά το πλαίσιο έχει σημασία. Ενημερωθείτε πάντα για τους τοπικούς νόμους πριν οργανώσετε δημόσιες εκστρατείες.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false" aria-controls="faq-3">
+            Τι είναι το BDS;
+            <span class="faq-icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            </span>
+          </button>
+          <div class="faq-answer" id="faq-3" role="region">
+            <div class="faq-answer-inner">
+              <p>BDS σημαίνει Μποϊκοτάζ, Αποεπένδυση και Κυρώσεις. Είναι μια παλαιστινιακή, μη βίαιη εκστρατεία που ξεκίνησε το 2005, καλώντας τη διεθνή κοινότητα να ασκήσει οικονομική και πολιτική πίεση στο Ισραήλ μέχρι να συμμορφωθεί με το διεθνές δίκαιο — συγκεκριμένα: τερματισμός της κατοχής παλαιστινιακών εδαφών, πλήρης ισότητα για Αράβες-Παλαιστίνιους πολίτες του Ισραήλ και τιμήση του δικαιώματος επιστροφής των Παλαιστινίων προσφύγων.</p>
+              <p>Το κίνημα BDS εμπνέεται από το νοτιοαφρικανικό κίνημα κατά του απαρτχάιντ. Μάθετε περισσότερα στο <a href="https://bdsmovement.net" target="_blank" rel="noopener noreferrer">bdsmovement.net</a>.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false" aria-controls="faq-4">
+            Πώς διαφέρει αυτό από την υποστήριξη της Χαμάς;
+            <span class="faq-icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            </span>
+          </button>
+          <div class="faq-answer" id="faq-4" role="region">
+            <div class="faq-answer-inner">
+              <p>Είναι εντελώς διαφορετικό. Η υποστήριξη των παλαιστινιακών ανθρωπίνων δικαιωμάτων δεν ισοδυναμεί με έγκριση οποιασδήποτε συγκεκριμένης πολιτικής ομάδας. Ο παλαιστινιακός λαός δεν είναι η Χαμάς, όπως ο γερμανικός λαός δεν είναι ένα συγκεκριμένο πολιτικό κόμμα.</p>
+              <p>Αυτός ο ιστότοπος δεν υποστηρίζει ρητά καμία ένοπλη ομάδα, συμπεριλαμβανομένης της Χαμάς. Ζητάμε την προστασία κάθε αμάχου ζωής — Παλαιστινίων και Ισραηλινών — και λογοδοσία βάσει του διεθνούς ανθρωπιστικού δικαίου για όλα τα μέρη της σύγκρουσης. Η υπεράσπισή μας βασίζεται στα καθολικά ανθρώπινα δικαιώματα, όχι στην κομματική πολιτική.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false" aria-controls="faq-5">
+            Τι λέει το διεθνές δίκαιο;
+            <span class="faq-icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            </span>
+          </button>
+          <div class="faq-answer" id="faq-5" role="region">
+            <div class="faq-answer-inner">
+              <p>Το Συμβούλιο Ασφαλείας του ΟΗΕ, η Γενική Συνέλευση του ΟΗΕ και το Διεθνές Δικαστήριο έχουν όλα εκδώσει σχετικές αποφάσεις. Το Ψήφισμα 242 του Συμβουλίου Ασφαλείας (1967) απαιτεί ισραηλινή αποχώρηση από τα κατεχόμενα εδάφη. Η Γνωμοδότηση του ΔΔ του 2004 έκρινε παράνομο το φράγμα της Δυτικής Όχθης βάσει διεθνούς δικαίου. Το 2024, το ΔΔ εξέδωσε προσωρινά μέτρα σε υπόθεση γενοκτονίας που κατέθεσε η Νότια Αφρική, και χωριστά έκρινε παράνομη την κατοχή παλαιστινιακών εδαφών από το Ισραήλ.</p>
+              <p>Η Τέταρτη Σύμβαση της Γενεύης απαγορεύει τη μεταφορά αμάχων πληθυσμών σε κατεχόμενα εδάφη (δηλαδή, εποικισμοί) και επιβάλλει την προστασία της αμάχου ζωής. Η Amnesty International και η Human Rights Watch έχουν δημοσιεύσει αναλυτικά πορίσματα για συνθήκες απαρτχάιντ και εγκλήματα πολέμου.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false" aria-controls="faq-6">
+            Έχω μόνο 5 λεπτά. Τι μπορώ να κάνω τώρα;
+            <span class="faq-icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            </span>
+          </button>
+          <div class="faq-answer" id="faq-6" role="region">
+            <div class="faq-answer-inner">
+              <p><strong>5 λεπτά:</strong> Μοιραστείτε αυτή τη σελίδα. Ακολουθήστε το +972 Magazine ή το Electronic Intifada. Στείλτε ένα προγραμματισμένο email στον εκπρόσωπό σας (δείτε την καρτέλα «Επικοινωνία» παραπάνω).</p>
+              <p><strong>1 ώρα:</strong> Διαβάστε τη σελίδα «Τι είναι το BDS;». Δείτε ένα σύντομο ντοκιμαντέρ. Δωρίστε στην UNRWA ή στο MAP.</p>
+              <p><strong>Σε συνεχή βάση:</strong> Εγγραφείτε σε τοπική ομάδα αλληλεγγύης. Δεσμευτείτε για σταθερή μηνιαία δωρεά. Οργανώστε μια προβολή ταινίας ή εκδήλωση ενημέρωσης στην κοινότητά σας. Μιλήστε ανοιχτά όταν ακούτε παραπληροφόρηση.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false" aria-controls="faq-7">
+            Είναι η κατοχή αμφισβητούμενη ή νομικό γεγονός;
+            <span class="faq-icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            </span>
+          </button>
+          <div class="faq-answer" id="faq-7" role="region">
+            <div class="faq-answer-inner">
+              <p>Η κατοχή της Δυτικής Όχθης, της Λωρίδας της Γάζας και της Ανατολικής Ιερουσαλήμ είναι νομικό γεγονός βάσει διεθνούς δικαίου, όχι θέμα πολιτικής γνώμης. Το Διεθνές Δικαστήριο εξέδωσε γνωμοδότηση τον Ιούλιο του 2024, κηρύσσοντας παράνομη τη συνεχιζόμενη παρουσία του Ισραήλ στα Κατεχόμενα Παλαιστινιακά Εδάφη.</p>
+              <p>Πάνω από 140 κράτη-μέλη του ΟΗΕ αναγνωρίζουν την Παλαιστίνη ως κράτος. Ο ΟΗΕ έχει ψηφίσει εκατοντάδες ψηφίσματα που καλούν για τερματισμό της κατοχής. Αυτό που παραμένει «αμφισβητούμενο» είναι το πώς, όχι το αν, πρέπει να τελειώσει η κατοχή.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false" aria-controls="faq-8">
+            Γιατί αυτός ο ιστότοπος δεν παρουσιάζει «και τις δύο πλευρές»;
+            <span class="faq-icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            </span>
+          </button>
+          <div class="faq-answer" id="faq-8" role="region">
+            <div class="faq-answer-inner">
+              <p>Αυτή είναι μια πλατφόρμα αλληλεγγύης — όχι ένα ουδέτερο ειδησεογραφικό μέσο. Η αλληλεγγύη σημαίνει να παίρνεις θέση. Παίρνουμε τη θέση ότι το διεθνές δίκαιο, τα ανθρώπινα δικαιώματα και η προστασία της αμάχου ζωής είναι αδιαπραγμάτευτα. Δεν εξισώνουμε τον κατακτητή με τον κατακτημένο, τον καταπιεστή με τον καταπιεζόμενο.</p>
+              <p>Αυτό δεν σημαίνει ότι είμαστε αδιάφοροι για τον ισραηλινό αμαχικό πόνο — καταδικάζουμε επιθέσεις σε όλους τους αμάχους. Αλλά η ψεύτικη ισορροπία δεν είναι αντικειμενικότητα: όταν η μια πλευρά ελέγχει τη γη, τα σύνορα, το νερό, τον αέρα και την οικονομία ενός άλλου λαού, η πλαισίωση «και οι δύο πλευρές» παραμορφώνει την πραγματικότητα.</p>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /faq-list -->
+    </div>
+  </section>
+
+  <!-- ===== ΠΗΓΕΣ ===== -->
+  <section id="resources" class="section-pad" aria-labelledby="resources-heading">
+    <div class="container">
+      <span class="section-label reveal">Εμβαθύνετε</span>
+      <h2 class="section-title green reveal" id="resources-heading">Αξιόπιστες<br>Πηγές</h2>
+
+      <div class="resources-grid reveal">
+
+        <div class="resource-group">
+          <div class="resource-group-header">Ηνωμένα Έθνη</div>
+          <a href="https://www.unrwa.org" target="_blank" rel="noopener noreferrer" class="resource-link">
+            <div><div class="resource-link-name">UNRWA</div><div class="resource-link-desc">Υπηρεσία Αρωγής και Έργων του ΟΗΕ για Παλαιστίνιους Πρόσφυγες</div></div>
+            <span class="resource-arrow" aria-hidden="true">↗</span>
+          </a>
+          <a href="https://www.ohchr.org/en/countries/israel-opt" target="_blank" rel="noopener noreferrer" class="resource-link">
+            <div><div class="resource-link-name">OHCHR — Παλαιστίνη</div><div class="resource-link-desc">Γραφείο Ανθρωπίνων Δικαιωμάτων ΟΗΕ — Κατεχόμενα Παλαιστινιακά Εδάφη</div></div>
+            <span class="resource-arrow" aria-hidden="true">↗</span>
+          </a>
+          <a href="https://www.icj-cij.org" target="_blank" rel="noopener noreferrer" class="resource-link">
+            <div><div class="resource-link-name">ΔΔ</div><div class="resource-link-desc">Αποφάσεις &amp; γνωμοδοτήσεις Διεθνούς Δικαστηρίου</div></div>
+            <span class="resource-arrow" aria-hidden="true">↗</span>
+          </a>
+          <a href="https://www.un.org/unispal" target="_blank" rel="noopener noreferrer" class="resource-link">
+            <div><div class="resource-link-name">UN ISPAL</div><div class="resource-link-desc">Σύστημα Πληροφοριών για το Παλαιστινιακό Ζήτημα</div></div>
+            <span class="resource-arrow" aria-hidden="true">↗</span>
+          </a>
+        </div>
+
+        <div class="resource-group">
+          <div class="resource-group-header red">Ανθρώπινα Δικαιώματα</div>
+          <a href="https://www.amnesty.org/en/location/middle-east-and-north-africa/israel-and-occupied-palestinian-territories/" target="_blank" rel="noopener noreferrer" class="resource-link">
+            <div><div class="resource-link-name">Amnesty International</div><div class="resource-link-desc">Τεκμηρίωση παραβιάσεων και πορίσματα απαρτχάιντ</div></div>
+            <span class="resource-arrow" aria-hidden="true">↗</span>
+          </a>
+          <a href="https://www.hrw.org/middle-east/north-africa/israel/palestine" target="_blank" rel="noopener noreferrer" class="resource-link">
+            <div><div class="resource-link-name">Human Rights Watch</div><div class="resource-link-desc">Έρευνες για Γάζα, Δυτική Όχθη και εποικισμούς</div></div>
+            <span class="resource-arrow" aria-hidden="true">↗</span>
+          </a>
+          <a href="https://www.btselem.org" target="_blank" rel="noopener noreferrer" class="resource-link">
+            <div><div class="resource-link-name">B'Tselem</div><div class="resource-link-desc">Ισραηλινός οργανισμός ανθρωπίνων δικαιωμάτων που τεκμηριώνει την κατοχή</div></div>
+            <span class="resource-arrow" aria-hidden="true">↗</span>
+          </a>
+          <a href="https://www.msf.org/palestine-occupied-territories" target="_blank" rel="noopener noreferrer" class="resource-link">
+            <div><div class="resource-link-name">Εκθέσεις MSF</div><div class="resource-link-desc">Εκθέσεις ιατρικής κατάστασης των Médecins Sans Frontières</div></div>
+            <span class="resource-arrow" aria-hidden="true">↗</span>
+          </a>
+        </div>
+
+        <div class="resource-group">
+          <div class="resource-group-header green">Μέσα &amp; Ανάλυση</div>
+          <a href="https://www.972mag.com" target="_blank" rel="noopener noreferrer" class="resource-link">
+            <div><div class="resource-link-name">+972 Magazine</div><div class="resource-link-desc">Ανεξάρτητη δημοσιογραφία από Ισραηλινούς και Παλαιστίνιους συντάκτες</div></div>
+            <span class="resource-arrow" aria-hidden="true">↗</span>
+          </a>
+          <a href="https://electronicintifada.net" target="_blank" rel="noopener noreferrer" class="resource-link">
+            <div><div class="resource-link-name">Electronic Intifada</div><div class="resource-link-desc">Ειδήσεις, σχόλια και ανάλυση</div></div>
+            <span class="resource-arrow" aria-hidden="true">↗</span>
+          </a>
+          <a href="https://mondoweiss.net" target="_blank" rel="noopener noreferrer" class="resource-link">
+            <div><div class="resource-link-name">Mondoweiss</div><div class="resource-link-desc">Ειδήσεις και απόψεις με εστίαση στην αμερικανική εξωτερική πολιτική</div></div>
+            <span class="resource-arrow" aria-hidden="true">↗</span>
+          </a>
+          <a href="https://decolonizepalestine.com" target="_blank" rel="noopener noreferrer" class="resource-link">
+            <div><div class="resource-link-name">Decolonize Palestine</div><div class="resource-link-desc">Αποδόμηση μύθων και προσιτό ιστορικό πλαίσιο</div></div>
+            <span class="resource-arrow" aria-hidden="true">↗</span>
+          </a>
+        </div>
+
+        <div class="resource-group">
+          <div class="resource-group-header">Ακαδημαϊκές Πηγές</div>
+          <a href="https://www.palestine-studies.org" target="_blank" rel="noopener noreferrer" class="resource-link">
+            <div><div class="resource-link-name">Ινστιτούτο Παλαιστινιακών Σπουδών</div><div class="resource-link-desc">Επιστημονική έρευνα με κριτική αξιολόγηση από το 1963</div></div>
+            <span class="resource-arrow" aria-hidden="true">↗</span>
+          </a>
+          <a href="https://palestineportal.org" target="_blank" rel="noopener noreferrer" class="resource-link">
+            <div><div class="resource-link-name">Palestine Portal</div><div class="resource-link-desc">Επιμελημένοι εκπαιδευτικοί πόροι και προγράμματα σπουδών</div></div>
+            <span class="resource-arrow" aria-hidden="true">↗</span>
+          </a>
+          <a href="https://www.palestineremembered.com" target="_blank" rel="noopener noreferrer" class="resource-link">
+            <div><div class="resource-link-name">Palestine Remembered</div><div class="resource-link-desc">Βάση δεδομένων χωριών, προφορικής ιστορίας και τεκμηρίωσης</div></div>
+            <span class="resource-arrow" aria-hidden="true">↗</span>
+          </a>
+          <a href="https://bdsmovement.net" target="_blank" rel="noopener noreferrer" class="resource-link">
+            <div><div class="resource-link-name">BDS Movement</div><div class="resource-link-desc">Επίσημος ιστότοπος της παλαιστινιακής εκστρατείας BDS</div></div>
+            <span class="resource-arrow" aria-hidden="true">↗</span>
+          </a>
+        </div>
+
+      </div><!-- /resources-grid -->
+    </div>
+  </section>
+
+</main>
+
+<!-- ===== ΥΠΟΣΕΛΙΔΟ ===== -->
+<footer class="site-footer" role="contentinfo">
+  <div class="footer-top">
+    <div class="footer-brand">
+      <a href="/el/" class="logo" aria-label="Palestine Now — Αρχική">
+        <span class="logo-icon" aria-hidden="true">🕊️</span>
+        Palestine<span style="color:var(--color-accent-red)">Now</span>
+      </a>
+      <p>
+        Μια ανεξάρτητη πλατφόρμα για παλαιστινιακή αλληλεγγύη, εκπαίδευση για τα ανθρώπινα δικαιώματα και μη βίαιη δράση. Χτισμένη για κάθε άνθρωπο που πιστεύει ότι η δικαιοσύνη δεν έχει σύνορα.
+      </p>
+      <p style="font-size:.78rem;color:var(--color-text-muted);">
+        Χωρίς παρακολούθηση. Χωρίς cookies. Χωρίς διαφήμιση. Ανοιχτός κώδικας.
+      </p>
+      <div style="display:flex;flex-direction:column;gap:0.4rem;margin-top:0.75rem;">
+        <a href="https://github.com/YOUR-USERNAME/YOUR-REPO" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:0.5rem;font-size:0.82rem;color:var(--color-text-muted);text-decoration:none;transition:color 150ms ease;" onmouseover="this.style.color='var(--color-text)'" onmouseout="this.style.color='var(--color-text-muted)'">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" style="width:15px;height:15px;flex-shrink:0;" aria-hidden="true"><path d="M12 2C6.477 2 2 6.484 2 12.021c0 4.428 2.865 8.185 6.839 9.504.5.092.682-.217.682-.482 0-.237-.009-.868-.013-1.703-2.782.605-3.369-1.342-3.369-1.342-.454-1.156-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.026 2.747-1.026.546 1.378.202 2.397.1 2.65.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.942.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.203 22 16.447 22 12.021 22 6.484 17.523 2 12 2z"/></svg>
+          Προβολή στο GitHub
+        </a>
+        <a href="https://github.com/YOUR-USERNAME/YOUR-REPO/issues/new" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:0.5rem;font-size:0.82rem;color:var(--color-accent-red);text-decoration:none;transition:color 150ms ease;" onmouseover="this.style.color='var(--color-accent-red-hover)'" onmouseout="this.style.color='var(--color-accent-red)'">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:15px;height:15px;flex-shrink:0;" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          Προτείνετε διόρθωση ή βελτίωση
+        </a>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <h4>Πλοήγηση</h4>
+      <ul class="footer-nav-list">
+        <li><a href="#about">Αποστολή</a></li>
+        <li><a href="#context">Πλαίσιο</a></li>
+        <li><a href="#act">Δράσε</a></li>
+        <li><a href="#faq">Ερωτήσεις</a></li>
+        <li><a href="#resources">Πηγές</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Γλώσσες</h4>
+      <ul class="footer-lang-list">
+        <li><a href="/">English</a></li>
+        <li><a href="/de/">Deutsch</a></li>
+        <li><a href="/tr/">Türkçe</a></li>
+        <li><a href="/ar/">العربية</a></li>
+        <li><a href="/ru/">Русский</a></li>
+        <li><a href="/el/" aria-current="page">Ελληνικά</a></li>
+        <li><a href="/zh/">中文</a></li>
+        <li><a href="/fr/">Français</a></li>
+        <li><a href="/es/">Español</a></li>
+        <li><a href="/pt/">Português</a></li>
+        <li><a href="/fa/">فارسی</a></li>
+        <li><a href="/ur/">اردو</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div style="border-top:1px solid var(--color-border);max-width:var(--container-max);margin:auto;padding:1.5rem var(--container-padding);">
+    <p style="font-size:.78rem;color:var(--color-text-muted);line-height:1.7;max-width:800px;">
+      <strong style="color:var(--color-text);">Σημείωση ΤΝ:</strong> Τμήματα του περιεχομένου, των μεταφράσεων και της δομής αυτού του ιστοτόπου δημιουργήθηκαν ή υποβοηθήθηκαν από τεχνητή νοημοσύνη (Claude της Anthropic). Παρόλο που έχει καταβληθεί κάθε προσπάθεια για τη διασφάλιση της ακρίβειας και της πιστής αναπαράστασης των πηγών, το περιεχόμενο που δημιουργήθηκε από ΤΝ ενδέχεται να περιέχει σφάλματα ή ανακρίβειες. Όλα τα γεγονότα πρέπει να επαληθεύονται ανεξάρτητα με τις αναφερόμενες πρωτογενείς πηγές. Καλωσορίζουμε διορθώσεις.
+    </p>
+  </div>
+
+  <div style="border-top:1px solid var(--color-border);max-width:var(--container-max);margin:auto;padding:1.5rem var(--container-padding);">
+    <p style="font-size:.78rem;color:var(--color-text-muted);line-height:1.7;max-width:800px;">
+      <strong style="color:var(--color-text)">Νομική Σημείωση:</strong> Αυτός ο ιστότοπος είναι μια ανεξάρτητη, μη εμπορική πλατφόρμα για υπεράσπιση ανθρωπίνων δικαιωμάτων. Όλοι οι συνδεδεμένοι εξωτερικοί πόροι παρέχονται για ενημερωτικούς σκοπούς· δεν είμαστε υπεύθυνοι για το περιεχόμενό τους. Η υπεράσπιση μποϊκοτάζ σε αυτό τον ιστότοπο αποτελεί προστατευόμενο πολιτικό λόγο βάσει του εφαρμοστέου δικαίου. Αυτός ο ιστότοπος δεν εκπροσωπεί καμία ένοπλη οργάνωση, κυβέρνηση ή πολιτικό κόμμα. Όλα τα αναφερόμενα γεγονότα προέρχονται από δημόσια διαθέσιμες εκθέσεις φορέων του ΟΗΕ και διεθνώς αναγνωρισμένων οργανισμών ανθρωπίνων δικαιωμάτων.
+    </p>
+  </div>
+
+  <div class="footer-bottom">
+    <div>
+      <p class="footer-bottom-text">Φτιαγμένο με ❤️ για τη δικαιοσύνη. Τελευταία ενημέρωση: Μάιος 2026.</p>
+      <p class="footer-bottom-text" style="margin-top:.25rem;">© 2026 Palestine Now — <a href="/el/" style="color:var(--color-text-muted);">palestinenow.org</a></p>
+    </div>
+    <div class="footer-controls">
+      <button class="footer-theme-btn" id="footerThemeToggle" aria-label="Εναλλαγή θέματος">Εναλλαγή Θέματος</button>
+    </div>
+  </div>
+</footer>
+
+<!-- ===== JAVASCRIPT ===== -->
+<script>
+  'use strict';
+
+  /* ============================================================
+     1. ΕΝΑΛΛΑΓΗ ΘΕΜΑΤΟΣ (ΣΚΟΤΕΙΝΗ / ΑΝΟΙΧΤΗ ΛΕΙΤΟΥΡΓΙΑ)
+  ============================================================ */
+  function getTheme() {
+    return localStorage.getItem('theme') ||
+      (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+  }
+
+  function setTheme(theme) {
+    document.documentElement.setAttribute('data-theme', theme);
+    localStorage.setItem('theme', theme);
+    var label = theme === 'dark' ? 'Εναλλαγή σε ανοιχτή λειτουργία' : 'Εναλλαγή σε σκοτεινή λειτουργία';
+    var toggleBtn = document.getElementById('themeToggle');
+    var footerBtn = document.getElementById('footerThemeToggle');
+    if (toggleBtn) toggleBtn.setAttribute('aria-label', label);
+    if (footerBtn) footerBtn.textContent = theme === 'dark' ? '☀️ Ανοιχτή Λειτουργία' : '🌙 Σκοτεινή Λειτουργία';
+  }
+
+  function toggleTheme() {
+    setTheme(getTheme() === 'dark' ? 'light' : 'dark');
+  }
+
+  document.getElementById('themeToggle').addEventListener('click', toggleTheme);
+  document.getElementById('footerThemeToggle').addEventListener('click', toggleTheme);
+  setTheme(getTheme());
+
+  /* ============================================================
+     2. ΣΚΙΑ ΚΕΦΑΛΙΔΑΣ ΜΕ ΚΥΛΙΣΗ
+  ============================================================ */
+  var header = document.getElementById('site-header');
+  var lastScroll = 0;
+  window.addEventListener('scroll', function() {
+    var scrollY = window.scrollY;
+    if (scrollY > 20) {
+      header.classList.add('scrolled');
+    } else {
+      header.classList.remove('scrolled');
+    }
+    lastScroll = scrollY;
+  }, { passive: true });
+
+  /* ============================================================
+     3. ΑΝΑΠΤΥΣΣΟΜΕΝΟ ΜΕΝΟΥ ΓΛΩΣΣΑΣ
+  ============================================================ */
+  var langBtn = document.getElementById('langBtn');
+  var langDropdown = document.getElementById('langDropdown');
+
+  langBtn.addEventListener('click', function(e) {
+    e.stopPropagation();
+    var isOpen = langDropdown.classList.toggle('open');
+    langBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+  });
+
+  document.addEventListener('click', function(e) {
+    if (!document.getElementById('langSwitcher').contains(e.target)) {
+      langDropdown.classList.remove('open');
+      langBtn.setAttribute('aria-expanded', 'false');
+    }
+  });
+
+  langBtn.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+      langDropdown.classList.remove('open');
+      langBtn.setAttribute('aria-expanded', 'false');
+      langBtn.focus();
+    }
+  });
+
+  /* ============================================================
+     4. ΚΙΝΗΤΟ ΜΕΝΟΥ
+  ============================================================ */
+  var menuToggle = document.getElementById('menuToggle');
+  var mobileNav = document.getElementById('mobileNav');
+
+  menuToggle.addEventListener('click', function() {
+    var isOpen = mobileNav.classList.toggle('open');
+    menuToggle.classList.toggle('open', isOpen);
+    menuToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+  });
+
+  mobileNav.querySelectorAll('a').forEach(function(link) {
+    link.addEventListener('click', function() {
+      mobileNav.classList.remove('open');
+      menuToggle.classList.remove('open');
+      menuToggle.setAttribute('aria-expanded', 'false');
+    });
+  });
+
+  /* ============================================================
+     5. ΟΜΑΛΗ ΚΥΛΙΣΗ (για παλαιότερα προγράμματα περιήγησης χωρίς εγγενή υποστήριξη)
+  ============================================================ */
+  document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
+    anchor.addEventListener('click', function(e) {
+      var target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        var offsetTop = target.getBoundingClientRect().top + window.scrollY - 80;
+        window.scrollTo({ top: offsetTop, behavior: 'smooth' });
+      }
+    });
+  });
+
+  /* ============================================================
+     ΑΝΤΙΓΡΑΦΗ HASHTAG
+  ============================================================ */
+  function copyHashtag(btn, text) {
+    var doFeedback = function() {
+      btn.classList.add('copied');
+      var original = btn.innerHTML;
+      btn.textContent = '✓ Αντιγράφηκε!';
+      setTimeout(function() {
+        btn.innerHTML = original;
+        btn.classList.remove('copied');
+      }, 1600);
+    };
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).then(doFeedback).catch(function() {
+        fallbackHashtagCopy(text, doFeedback);
+      });
+    } else {
+      fallbackHashtagCopy(text, doFeedback);
+    }
+  }
+
+  function fallbackHashtagCopy(text, cb) {
+    var tmp = document.createElement('textarea');
+    tmp.value = text;
+    tmp.style.cssText = 'position:fixed;opacity:0;top:0;left:0;';
+    document.body.appendChild(tmp);
+    tmp.focus();
+    tmp.select();
+    try { document.execCommand('copy'); cb(); } catch(e) {}
+    document.body.removeChild(tmp);
+  }
+
+  /* ============================================================
+     6. ΚΑΡΤΕΛΕΣ — ΔΡΑΣΗ
+  ============================================================ */
+  var tabBtns = document.querySelectorAll('.tab-btn[role="tab"]');
+  var tabPanels = document.querySelectorAll('.tab-panel[role="tabpanel"]');
+
+  function activateTab(btn) {
+    tabBtns.forEach(function(b) {
+      b.setAttribute('aria-selected', 'false');
+      b.tabIndex = -1;
+    });
+    tabPanels.forEach(function(p) { p.classList.remove('active'); });
+
+    btn.setAttribute('aria-selected', 'true');
+    btn.tabIndex = 0;
+    var panelId = btn.getAttribute('aria-controls');
+    var panel = document.getElementById(panelId);
+    if (panel) panel.classList.add('active');
+  }
+
+  tabBtns.forEach(function(btn, index) {
+    btn.tabIndex = index === 0 ? 0 : -1;
+    btn.addEventListener('click', function() { activateTab(this); });
+    btn.addEventListener('keydown', function(e) {
+      var currentIndex = Array.from(tabBtns).indexOf(document.activeElement);
+      if (e.key === 'ArrowRight') {
+        e.preventDefault();
+        var next = tabBtns[(currentIndex + 1) % tabBtns.length];
+        next.focus();
+        activateTab(next);
+      } else if (e.key === 'ArrowLeft') {
+        e.preventDefault();
+        var prev = tabBtns[(currentIndex - 1 + tabBtns.length) % tabBtns.length];
+        prev.focus();
+        activateTab(prev);
+      } else if (e.key === 'Home') {
+        e.preventDefault();
+        tabBtns[0].focus();
+        activateTab(tabBtns[0]);
+      } else if (e.key === 'End') {
+        e.preventDefault();
+        tabBtns[tabBtns.length - 1].focus();
+        activateTab(tabBtns[tabBtns.length - 1]);
+      }
+    });
+  });
+
+  /* ============================================================
+     7. ΣΥΜΠΤΥΞΗ ΣΥΧΝΩΝ ΕΡΩΤΗΣΕΩΝ
+  ============================================================ */
+  document.querySelectorAll('.faq-question').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      var expanded = this.getAttribute('aria-expanded') === 'true';
+      var answerId = this.getAttribute('aria-controls');
+      var answerEl = document.getElementById(answerId);
+
+      // Σύμπτυξη όλων
+      document.querySelectorAll('.faq-question').forEach(function(b) {
+        b.setAttribute('aria-expanded', 'false');
+        var id = b.getAttribute('aria-controls');
+        var el = document.getElementById(id);
+        if (el) el.style.maxHeight = '0';
+      });
+
+      // Άνοιγμα του επιλεγμένου (αν ήταν κλειστό)
+      if (!expanded && answerEl) {
+        this.setAttribute('aria-expanded', 'true');
+        answerEl.style.maxHeight = answerEl.scrollHeight + 'px';
+      }
+    });
+
+    btn.addEventListener('keydown', function(e) {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        this.click();
+      }
+    });
+  });
+
+  /* ============================================================
+     8. ΑΝΤΙΓΡΑΦΗ ΠΡΟΤΥΠΟΥ EMAIL
+  ============================================================ */
+  function copyEmailTemplate() {
+    var textarea = document.getElementById('emailTemplate');
+    var feedback = document.getElementById('copyFeedback');
+    var btn = document.getElementById('copyEmailBtn');
+
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(textarea.value).then(function() {
+        showCopyFeedback(btn, feedback);
+      }).catch(function() {
+        fallbackCopy(textarea, btn, feedback);
+      });
+    } else {
+      fallbackCopy(textarea, btn, feedback);
+    }
+  }
+
+  function fallbackCopy(textarea, btn, feedback) {
+    textarea.select();
+    textarea.setSelectionRange(0, 99999);
+    try {
+      document.execCommand('copy');
+      showCopyFeedback(btn, feedback);
+    } catch(e) {
+      console.warn('Η αντιγραφή απέτυχε:', e);
+    }
+  }
+
+  function showCopyFeedback(btn, feedback) {
+    var originalText = btn.textContent;
+    btn.textContent = '✓ Αντιγράφηκε!';
+    feedback.classList.add('show');
+    setTimeout(function() {
+      btn.textContent = originalText;
+      feedback.classList.remove('show');
+    }, 2500);
+  }
+
+  /* ============================================================
+     9. INTERSECTION OBSERVER — ΑΠΟΚΑΛΥΨΗ ΜΕ ΚΥΛΙΣΗ
+  ============================================================ */
+  if ('IntersectionObserver' in window) {
+    var observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+    document.querySelectorAll('.reveal').forEach(function(el) {
+      observer.observe(el);
+    });
+  } else {
+    // Εναλλακτική: εμφάνιση όλων άμεσα
+    document.querySelectorAll('.reveal').forEach(function(el) {
+      el.classList.add('is-visible');
+    });
+  }
+
+</script>
+
+<!--
+=================================================================
+Περιεχόμενο robots.txt (αναπτύξτε ως /robots.txt):
+=================================================================
+User-agent: *
+Allow: /
+Sitemap: https://palestinenow.org/sitemap.xml
+
+=================================================================
+Περιεχόμενο sitemap.xml (αναπτύξτε ως /sitemap.xml):
+=================================================================
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://palestinenow.org/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://palestinenow.org/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://palestinenow.org/de/"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://palestinenow.org/tr/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://palestinenow.org/ar/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://palestinenow.org/ru/"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://palestinenow.org/el/"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://palestinenow.org/zh/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://palestinenow.org/fr/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://palestinenow.org/es/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://palestinenow.org/pt/"/>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://palestinenow.org/fa/"/>
+    <xhtml:link rel="alternate" hreflang="ur" href="https://palestinenow.org/ur/"/>
+    <lastmod>2026-05-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url><loc>https://palestinenow.org/de/</loc><lastmod>2026-05-10</lastmod><priority>0.9</priority></url>
+  <url><loc>https://palestinenow.org/tr/</loc><lastmod>2026-05-10</lastmod><priority>0.9</priority></url>
+  <url><loc>https://palestinenow.org/ar/</loc><lastmod>2026-05-10</lastmod><priority>0.9</priority></url>
+  <url><loc>https://palestinenow.org/ru/</loc><lastmod>2026-05-10</lastmod><priority>0.9</priority></url>
+  <url><loc>https://palestinenow.org/el/</loc><lastmod>2026-05-10</lastmod><priority>0.9</priority></url>
+  <url><loc>https://palestinenow.org/zh/</loc><lastmod>2026-05-10</lastmod><priority>0.9</priority></url>
+  <url><loc>https://palestinenow.org/fr/</loc><lastmod>2026-05-10</lastmod><priority>0.9</priority></url>
+  <url><loc>https://palestinenow.org/es/</loc><lastmod>2026-05-10</lastmod><priority>0.9</priority></url>
+  <url><loc>https://palestinenow.org/pt/</loc><lastmod>2026-05-10</lastmod><priority>0.9</priority></url>
+  <url><loc>https://palestinenow.org/fa/</loc><lastmod>2026-05-10</lastmod><priority>0.9</priority></url>
+  <url><loc>https://palestinenow.org/ur/</loc><lastmod>2026-05-10</lastmod><priority>0.9</priority></url>
+</urlset>
+
+=================================================================
+Περιεχόμενο manifest.webmanifest (αναπτύξτε ως /manifest.webmanifest):
+=================================================================
+{
+  "name": "Palestine Now",
+  "short_name": "PalestineNow",
+  "description": "Σταθείτε για τη δικαιοσύνη στην Παλαιστίνη. Δράστε.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0a0a0a",
+  "theme_color": "#ce1126",
+  "lang": "el"
+}
+-->
+
+</body>
+</html>
