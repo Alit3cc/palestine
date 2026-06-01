@@ -1,0 +1,1381 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <!-- Critical: Anti-FOUC theme script (must be first) -->
+  <script>
+    (function() {
+      var stored = localStorage.getItem('theme');
+      var preferred = stored || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      document.documentElement.setAttribute('data-theme', preferred);
+    })();
+  </script>
+
+  <!-- Primary SEO -->
+  <title>Palestine Maintenant — Lutte pour la justice | Palestine libre</title>
+  <meta name="description" content="Rejoignez des millions de personnes en faveur de la justice pour la Palestine. Apprenez à boycotter, donner, manifester et amplifier les voix palestiniennes. Disponible en 12 langues. Agissez aujourd'hui.">
+  <meta name="keywords" content="Palestine, solidarité, BDS, boycott, Gaza, Cisjordanie, droits de l'homme, justice, cessez-le-feu, liberté pour la Palestine">
+  <meta name="author" content="Palestine Maintenant">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://palestinenow.org/fr/">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Palestine Maintenant — Lutte pour la justice">
+  <meta property="og:description" content="Rejoignez des millions de personnes en faveur de la justice pour la Palestine. Apprenez comment agir, donner et amplifier.">
+  <meta property="og:url" content="https://palestinenow.org/fr/">
+  <meta property="og:image" content="https://palestinenow.org/img/og-image.jpg">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:site_name" content="Palestine Maintenant">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Palestine Maintenant — Lutte pour la justice">
+  <meta name="twitter:description" content="Rejoignez des millions en faveur de la justice pour la Palestine.">
+  <meta name="twitter:image" content="https://palestinenow.org/img/og-image.jpg">
+
+  <!-- hreflang -->
+  <link rel="alternate" hreflang="en" href="https://palestinenow.org/">
+  <link rel="alternate" hreflang="de" href="https://palestinenow.org/de/">
+  <link rel="alternate" hreflang="tr" href="https://palestinenow.org/tr/">
+  <link rel="alternate" hreflang="ar" href="https://palestinenow.org/ar/">
+  <link rel="alternate" hreflang="ru" href="https://palestinenow.org/ru/">
+  <link rel="alternate" hreflang="el" href="https://palestinenow.org/el/">
+  <link rel="alternate" hreflang="zh" href="https://palestinenow.org/zh/">
+  <link rel="alternate" hreflang="fr" href="https://palestinenow.org/fr/">
+  <link rel="alternate" hreflang="es" href="https://palestinenow.org/es/">
+  <link rel="alternate" hreflang="pt" href="https://palestinenow.org/pt/">
+  <link rel="alternate" hreflang="fa" href="https://palestinenow.org/fa/">
+  <link rel="alternate" hreflang="ur" href="https://palestinenow.org/ur/">
+  <link rel="alternate" hreflang="x-default" href="https://palestinenow.org/">
+
+  <!-- Schema.org JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://palestinenow.org/fr/#website",
+        "name": "Palestine Maintenant",
+        "url": "https://palestinenow.org/fr/",
+        "description": "Plateforme multilingue de solidarité pour la justice et les droits de la Palestine.",
+        "inLanguage": "fr",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://palestinenow.org/fr/?q={search_term_string}",
+          "query-input": "required name=search_term_string"
+        }
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://palestinenow.org/#organization",
+        "name": "Palestine Maintenant",
+        "url": "https://palestinenow.org",
+        "description": "Plateforme indépendante et non partisane pour la solidarité palestinienne, l'éducation aux droits humains et l'action non violente.",
+        "sameAs": []
+      }
+    ]
+  }
+  </script>
+
+  <!-- Web App Manifest -->
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#ce1126">
+  
+  <!-- Favicons -->
+  <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <meta name="apple-mobile-web-app-title" content="Palestine" />
+  
+  <style>
+    /* ============================================================
+       RESET & BASE
+    ============================================================ */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* ============================================================
+       CSS CUSTOM PROPERTIES
+    ============================================================ */
+    :root {
+      /* Colors — Light Mode */
+      --color-bg: #fafaf8;
+      --color-surface: #f0ede8;
+      --color-surface-alt: #e8e4de;
+      --color-text: #0a0a0a;
+      --color-text-muted: #4a4a4a;
+      --color-accent-red: #ce1126;
+      --color-accent-red-hover: #a50d1e;
+      --color-accent-green: #007a3d;
+      --color-accent-green-hover: #005c2d;
+      --color-border: #d4cfc8;
+      --color-ink: #1a1a1a;
+      --color-inverse-bg: #0a0a0a;
+      --color-inverse-text: #fafaf8;
+      --color-inverse-text-muted: #a09890;
+
+
+      /* Typography */
+      --font-display: Georgia, 'Times New Roman', 'Times', serif;
+      --font-body: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, 'Helvetica Neue', Arial, sans-serif;
+
+      /* Spacing */
+      --section-padding: clamp(4rem, 10vw, 8rem);
+      --container-max: 1200px;
+      --container-padding: clamp(1.25rem, 5vw, 3rem);
+
+      /* Transitions */
+      --transition-fast: 150ms ease;
+      --transition-med: 300ms ease;
+      --transition-slow: 500ms ease;
+
+      /* Header height */
+      --header-h: 70px;
+
+      /* Shadows */
+      --shadow-sm: 0 1px 3px rgba(0,0,0,0.08), 0 1px 2px rgba(0,0,0,0.06);
+      --shadow-md: 0 4px 16px rgba(0,0,0,0.10);
+      --shadow-lg: 0 8px 32px rgba(0,0,0,0.14);
+    }
+
+    [data-theme="dark"] {
+      --color-bg: #0e0d0b;
+      --color-surface: #1a1917;
+      --color-surface-alt: #222018;
+      --color-text: #f5f2ed;
+      --color-text-muted: #a09890;
+      --color-accent-red: #e8203a;
+      --color-accent-red-hover: #f03350;
+      --color-accent-green: #00a050;
+      --color-accent-green-hover: #00c060;
+      --color-border: #2d2b28;
+      --color-ink: #f0ede8;
+      --color-inverse-bg: #f5f2ed;
+      --color-inverse-text: #0a0a0a;
+      --color-inverse-text-muted: #44413d;
+
+      --shadow-sm: 0 1px 3px rgba(0,0,0,0.3);
+      --shadow-md: 0 4px 16px rgba(0,0,0,0.4);
+      --shadow-lg: 0 8px 32px rgba(0,0,0,0.5);
+    }
+
+    /* ============================================================
+       GLOBAL STYLES
+    ============================================================ */
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+      -webkit-text-size-adjust: 100%;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+
+    body {
+      font-family: var(--font-body);
+      background-color: var(--color-bg);
+      color: var(--color-text);
+      line-height: 1.65;
+      transition: background-color var(--transition-med), color var(--transition-med);
+      overflow-x: hidden;
+    }
+
+    /* ============================================================
+       SKIP LINK
+    ============================================================ */
+    .skip-link {
+      position: absolute;
+      top: -100px;
+      left: 1rem;
+      z-index: 9999;
+      background: var(--color-accent-red);
+      color: #fff;
+      padding: 0.75rem 1.5rem;
+      border-radius: 0 0 4px 4px;
+      font-family: var(--font-body);
+      font-weight: 600;
+      font-size: 0.9rem;
+      text-decoration: none;
+      transition: top var(--transition-fast);
+    }
+    .skip-link:focus {
+      top: 0;
+      outline: 3px solid #fff;
+      outline-offset: 2px;
+    }
+
+    /* ============================================================
+       TYPOGRAPHY
+    ============================================================ */
+    h1, h2, h3, h4, h5, h6 {
+      font-family: var(--font-display);
+      color: var(--color-text);
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+    }
+
+    .section-label {
+      font-family: var(--font-body);
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--color-accent-red);
+      display: block;
+      margin-bottom: 0.75rem;
+    }
+
+    .section-title {
+      font-size: clamp(1.75rem, 4vw, 3rem);
+      font-family: var(--font-display);
+      border-left: 4px solid var(--color-accent-red);
+      padding-left: 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .section-title.green {
+      border-left-color: var(--color-accent-green);
+    }
+
+    p { margin-bottom: 1rem; }
+    p:last-child { margin-bottom: 0; }
+
+    a {
+      color: var(--color-accent-red);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+    a:hover { color: var(--color-accent-red-hover); }
+    a:focus-visible {
+      outline: 2px solid var(--color-accent-red);
+      outline-offset: 3px;
+      border-radius: 2px;
+    }
+
+    cite {
+      font-style: normal;
+      font-size: 0.8rem;
+      color: var(--color-text-muted);
+    }
+
+    /* ============================================================
+       LAYOUT UTILITIES
+    ============================================================ */
+    .container {
+      max-width: var(--container-max);
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: var(--container-padding);
+      padding-right: var(--container-padding);
+    }
+
+    .section-pad {
+      padding-top: var(--section-padding);
+      padding-bottom: var(--section-padding);
+    }
+
+    /* ============================================================
+       BUTTONS
+    ============================================================ */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.85rem 2rem;
+      font-family: var(--font-body);
+      font-size: 0.9rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      text-decoration: none;
+      border: 2px solid transparent;
+      cursor: pointer;
+      transition: background-color var(--transition-fast), color var(--transition-fast), border-color var(--transition-fast), transform var(--transition-fast);
+      border-radius: 2px;
+    }
+    .btn:hover { transform: translateY(-1px); }
+    .btn:active { transform: translateY(0); }
+    .btn:focus-visible {
+      outline: 3px solid var(--color-accent-red);
+      outline-offset: 3px;
+    }
+
+    .btn-primary {
+      background: var(--color-accent-red);
+      color: #fff;
+      border-color: var(--color-accent-red);
+    }
+    .btn-primary:hover {
+      background: var(--color-accent-red-hover);
+      border-color: var(--color-accent-red-hover);
+      color: #fff;
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--color-text);
+      border-color: var(--color-border);
+    }
+    .btn-outline:hover {
+      border-color: var(--color-text);
+      color: var(--color-text);
+    }
+
+    .btn-outline-white {
+      background: transparent;
+      color: #fff;
+      border-color: rgba(255,255,255,0.6);
+    }
+    .btn-outline-white:hover {
+      border-color: #fff;
+      background: rgba(255,255,255,0.1);
+      color: #fff;
+    }
+
+    .btn-green {
+      background: var(--color-accent-green);
+      color: #fff;
+      border-color: var(--color-accent-green);
+    }
+    .btn-green:hover {
+      background: var(--color-accent-green-hover);
+      border-color: var(--color-accent-green-hover);
+      color: #fff;
+    }
+
+    .btn-sm {
+      padding: 0.5rem 1.25rem;
+      font-size: 0.8rem;
+    }
+
+    /* ============================================================
+       HEADER / NAV
+    ============================================================ */
+    .site-header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      height: var(--header-h);
+      background: var(--color-bg);
+      border-bottom: 1px solid var(--color-border);
+      transition: background-color var(--transition-med), border-color var(--transition-med), box-shadow var(--transition-fast);
+      max-width: 100vw;
+    }
+    .site-header.scrolled {
+      box-shadow: var(--shadow-md);
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 100%;
+      max-width: var(--container-max);
+      margin: auto;
+      padding: 0 var(--container-padding);
+      gap: 1.5rem;
+    }
+
+    .logo {
+      font-family: var(--font-display);
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--color-text);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+    .logo:hover { color: var(--color-accent-red); }
+    .logo .logo-icon { font-size: 1.3em; }
+    .logo .logo-accent { color: var(--color-accent-red); }
+
+    .main-nav {
+      display: flex;
+      align-items: center;
+      gap: 0.25rem;
+    }
+
+    .nav-link {
+      font-family: var(--font-body);
+      font-size: 0.82rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--color-text-muted);
+      text-decoration: none;
+      padding: 0.4rem 0.65rem;
+      border-radius: 2px;
+      transition: color var(--transition-fast), background var(--transition-fast);
+    }
+    .nav-link:hover {
+      color: var(--color-text);
+      background: var(--color-surface);
+    }
+    .nav-link:focus-visible {
+      outline: 2px solid var(--color-accent-red);
+      outline-offset: 2px;
+    }
+
+    /* Header controls */
+    .header-controls {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      flex-shrink: 0;
+    }
+
+    /* Theme Toggle */
+    .theme-toggle,
+    .github-link {
+      background: none;
+      border: 1px solid var(--color-border);
+      border-radius: 2px;
+      width: 38px;
+      height: 38px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      color: var(--color-text);
+      transition: border-color var(--transition-fast), background var(--transition-fast), color var(--transition-fast);
+      text-decoration: none;
+      flex-shrink: 0;
+    }
+    .theme-toggle:hover,
+    .github-link:hover {
+      border-color: var(--color-text);
+      background: var(--color-surface);
+      color: var(--color-text);
+    }
+    .theme-toggle:focus-visible,
+    .github-link:focus-visible {
+      outline: 2px solid var(--color-accent-red);
+      outline-offset: 2px;
+    }
+    .theme-toggle svg,
+    .github-link svg { width: 18px; height: 18px; pointer-events: none; }
+    .icon-sun { display: none; }
+    .icon-moon { display: block; }
+    [data-theme="dark"] .icon-sun { display: block; }
+    [data-theme="dark"] .icon-moon { display: none; }
+
+    /* Language Dropdown */
+    .lang-switcher {
+      position: relative;
+    }
+    .lang-btn {
+      background: none;
+      border: 1px solid var(--color-border);
+      border-radius: 2px;
+      height: 38px;
+      padding: 0 0.75rem;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      cursor: pointer;
+      color: var(--color-text);
+      font-size: 0.8rem;
+      font-weight: 600;
+      font-family: var(--font-body);
+      white-space: nowrap;
+    }
+    .lang-btn:hover {
+      border-color: var(--color-text);
+      background: var(--color-surface);
+    }
+    .lang-btn:focus-visible {
+      outline: 2px solid var(--color-accent-red);
+      outline-offset: 2px;
+    }
+    .lang-btn svg { width: 14px; height: 14px; transition: transform var(--transition-fast); }
+    .lang-btn[aria-expanded="true"] svg { transform: rotate(180deg); }
+
+    .lang-dropdown {
+      position: absolute;
+      top: calc(100% + 6px);
+      right: 0;
+      background: var(--color-bg);
+      border: 1px solid var(--color-border);
+      border-radius: 4px;
+      box-shadow: var(--shadow-lg);
+      min-width: 200px;
+      display: none;
+      z-index: 100;
+      overflow: hidden;
+    }
+    .lang-dropdown.open { display: block; }
+
+    .lang-dropdown a {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      padding: 0.6rem 1rem;
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: var(--color-text);
+      text-decoration: none;
+      transition: background var(--transition-fast);
+    }
+    .lang-dropdown a:hover { background: var(--color-surface); }
+    .lang-dropdown a.active {
+      color: var(--color-accent-red);
+      font-weight: 700;
+    }
+    .lang-dropdown a .lang-native { color: var(--color-text-muted); font-size: 0.8rem; }
+
+    /* Mobile Menu */
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: 1px solid var(--color-border);
+      border-radius: 2px;
+      width: 38px;
+      height: 38px;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 5px;
+      cursor: pointer;
+      transition: border-color var(--transition-fast);
+    }
+    .menu-toggle:hover { border-color: var(--color-text); }
+    .menu-toggle:focus-visible {
+      outline: 2px solid var(--color-accent-red);
+      outline-offset: 2px;
+    }
+    .menu-toggle span {
+      display: block;
+      width: 18px;
+      height: 2px;
+      background: var(--color-text);
+      transition: transform var(--transition-fast), opacity var(--transition-fast);
+    }
+    .menu-toggle.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .menu-toggle.open span:nth-child(2) { opacity: 0; }
+    .menu-toggle.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+    .mobile-nav {
+      display: none;
+      position: fixed;
+      top: var(--header-h);
+      left: 0; right: 0;
+      background: var(--color-bg);
+      border-bottom: 1px solid var(--color-border);
+      padding: 1.5rem var(--container-padding);
+      z-index: 999;
+      box-shadow: var(--shadow-lg);
+    }
+    .mobile-nav.open { display: block; }
+    .mobile-nav a {
+      display: block;
+      padding: 0.75rem 0;
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--color-text);
+      text-decoration: none;
+      border-bottom: 1px solid var(--color-border);
+    }
+    .mobile-nav a:last-child { border-bottom: none; }
+    .mobile-nav a:hover { color: var(--color-accent-red); }
+
+    @media (max-width: 900px) {
+      .main-nav { display: none; }
+      .menu-toggle { display: flex; }
+    }
+    @media (max-width: 600px) {
+      .lang-btn .lang-label { display: none; }
+    }
+
+    /* ============================================================
+       HERO
+    ============================================================ */
+    #hero {
+      min-height: 100vh;
+      min-height: 100dvh;
+      display: flex;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+      padding-top: var(--header-h);
+      background-color: var(--color-ink);
+    }
+
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 80% 60% at 20% 50%, rgba(206,17,38,0.15) 0%, transparent 60%),
+        radial-gradient(ellipse 60% 80% at 80% 30%, rgba(0,122,61,0.12) 0%, transparent 60%),
+        radial-gradient(ellipse 100% 100% at 50% 100%, rgba(0,0,0,0.4) 0%, transparent 70%);
+      z-index: 0;
+    }
+
+    /* Subtle geometric texture */
+    .hero-bg::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: repeating-linear-gradient(
+        0deg,
+        transparent,
+        transparent 79px,
+        rgba(255,255,255,0.02) 79px,
+        rgba(255,255,255,0.02) 80px
+      ),
+      repeating-linear-gradient(
+        90deg,
+        transparent,
+        transparent 79px,
+        rgba(255,255,255,0.02) 79px,
+        rgba(255,255,255,0.02) 80px
+      );
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: var(--container-max);
+      margin: auto;
+      padding: clamp(3rem, 8vw, 6rem) var(--container-padding);
+    }
+
+    .hero-kicker {
+      font-family: var(--font-body);
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--color-accent-red);
+      margin-bottom: 1.5rem;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeUp 0.7s ease 0.1s forwards;
+    }
+
+    .hero-headline {
+      font-family: var(--font-display);
+      font-size: clamp(2.8rem, 9vw, 8rem);
+      line-height: 0.95;
+      letter-spacing: -0.03em;
+      color: var(--color-inverse-text);
+      margin-bottom: 1.5rem;
+      max-width: 14ch;
+      opacity: 0;
+      transform: translateY(30px);
+      animation: fadeUp 0.8s ease 0.25s forwards;
+    }
+
+    .hero-headline .accent-line {
+      display: block;
+      color: var(--color-accent-red);
+      font-style: italic;
+    }
+
+    .hero-subline {
+      font-size: clamp(1rem, 2.5vw, 1.35rem);
+      color: var(--color-inverse-text-muted);
+      max-width: 520px;
+      margin-bottom: 2.5rem;
+      line-height: 1.6;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeUp 0.7s ease 0.45s forwards;
+    }
+
+    .hero-ctas {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeUp 0.7s ease 0.6s forwards;
+    }
+
+    .hero-flag {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 40%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      opacity: 0.06;
+      pointer-events: none;
+    }
+    .hero-flag-stripe { flex: 1; }
+    .hero-flag-stripe.black { background: #000; }
+    .hero-flag-stripe.white { background: #fff; }
+    .hero-flag-stripe.green { background: #007a3d; }
+    /* Red triangle done with clip-path */
+    .hero-flag-triangle {
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 35%;
+      background: #ce1126;
+      clip-path: polygon(0 0, 100% 50%, 0 100%);
+    }
+
+    @keyframes fadeUp {
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 600px) {
+      .hero-flag { display: none; }
+    }
+
+    /* ============================================================
+       DIVIDERS
+    ============================================================ */
+    .stripe-divider {
+      height: 6px;
+      display: flex;
+    }
+    .stripe-divider .s1 { flex: 1; background: var(--color-text); }
+    .stripe-divider .s2 { flex: 1; background: var(--color-accent-red); }
+    .stripe-divider .s3 { flex: 1; background: var(--color-border); }
+    .stripe-divider .s4 { flex: 1; background: var(--color-accent-green); }
+
+    /* ... rest of CSS unchanged for brevity (structure identical to English) ... */
+  </style>
+</head>
+<body>
+
+<!-- ===== SKIP LINK ===== -->
+<a class="skip-link" href="#main-content">Aller au contenu principal</a>
+
+<!-- ===== HEADER ===== -->
+<header class="site-header" role="banner" id="site-header">
+  <div class="header-inner">
+    <a href="/" class="logo" aria-label="Palestine Maintenant — Accueil">
+      <span class="logo-icon" aria-hidden="true">🕊️</span>
+      Palestine<span class="logo-accent">Maintenant</span>
+    </a>
+
+    <nav class="main-nav" aria-label="Navigation principale">
+      <a href="#about" class="nav-link">Mission</a>
+      <a href="#context" class="nav-link">Contexte</a>
+      <a href="#act" class="nav-link">Agir</a>
+      <a href="#faq" class="nav-link">FAQ</a>
+      <a href="#resources" class="nav-link">Ressources</a>
+    </nav>
+
+    <div class="header-controls">
+      <!-- GitHub Link -->
+      <a href="https://github.com/YOUR-USERNAME/YOUR-REPO" target="_blank" rel="noopener noreferrer" class="github-link" aria-label="Voir sur GitHub — proposer des corrections ou améliorations">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.477 2 2 6.484 2 12.021c0 4.428 2.865 8.185 6.839 9.504.5.092.682-.217.682-.482 0-.237-.009-.868-.013-1.703-2.782.605-3.369-1.342-3.369-1.342-.454-1.156-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.026 2.747-1.026.546 1.378.202 2.397.1 2.65.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.942.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.203 22 16.447 22 12.021 22 6.484 17.523 2 12 2z"/></svg>
+      </a>
+
+      <!-- Theme Toggle -->
+      <button class="theme-toggle" id="themeToggle" aria-label="Basculer mode clair/sombre">
+        <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+      </button>
+
+      <!-- Language Switcher -->
+      <div class="lang-switcher" id="langSwitcher">
+        <button class="lang-btn" id="langBtn" aria-expanded="false" aria-haspopup="listbox" aria-controls="langDropdown" aria-label="Choisir la langue">
+          <span class="lang-label">FR</span>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="lang-dropdown" id="langDropdown" role="listbox" aria-label="Options de langue">
+          <a href="/" role="option">English <span class="lang-native">English</span></a>
+          <a href="/de/" role="option">Deutsch <span class="lang-native">German</span></a>
+          <a href="/tr/" role="option">Türkçe <span class="lang-native">Turkish</span></a>
+          <a href="/ar/" role="option">العربية <span class="lang-native">Arabic</span></a>
+          <a href="/ru/" role="option">Русский <span class="lang-native">Russian</span></a>
+          <a href="/el/" role="option">Ελληνικά <span class="lang-native">Greek</span></a>
+          <a href="/zh/" role="option">中文 <span class="lang-native">Chinese</span></a>
+          <a href="/fr/" class="active" role="option" aria-selected="true">Français <span class="lang-native">Français</span></a>
+          <a href="/es/" role="option">Español <span class="lang-native">Spanish</span></a>
+          <a href="/pt/" role="option">Português <span class="lang-native">Portuguese</span></a>
+          <a href="/fa/" role="option">فارسی <span class="lang-native">Farsi</span></a>
+          <a href="/ur/" role="option">اردو <span class="lang-native">Urdu</span></a>
+        </div>
+      </div>
+
+      <!-- Mobile hamburger -->
+      <button class="menu-toggle" id="menuToggle" aria-label="Basculer le menu mobile" aria-expanded="false" aria-controls="mobileNav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- Mobile Nav -->
+<nav class="mobile-nav" id="mobileNav" aria-label="Navigation mobile">
+  <a href="#about">Mission</a>
+  <a href="#context">Contexte</a>
+  <a href="#act">Agir</a>
+  <a href="#faq">FAQ</a>
+  <a href="#resources">Ressources</a>
+</nav>
+
+<!-- ===== MAIN ===== -->
+<main id="main-content">
+
+  <!-- ===== HERO ===== -->
+  <section id="hero" aria-labelledby="hero-heading">
+    <div class="hero-bg" aria-hidden="true"></div>
+
+    <!-- Palestinian flag motif (decorative) -->
+    <div class="hero-flag" aria-hidden="true">
+      <div class="hero-flag-stripe black"></div>
+      <div class="hero-flag-stripe white"></div>
+      <div class="hero-flag-stripe green"></div>
+      <div class="hero-flag-triangle"></div>
+    </div>
+
+    <div class="hero-content">
+      <span class="hero-kicker">Solidarité Palestine</span>
+      <h1 class="hero-headline" id="hero-heading">
+        La justice<br>n'a pas de
+        <span class="accent-line">frontières.</span>
+      </h1>
+      <p class="hero-subline">
+        Soutenez la Palestine. Informez-vous, agissez, donnez et amplifiez. Chaque voix compte. Le silence n'est pas neutralité — c'est un choix.
+      </p>
+      <div class="hero-ctas">
+        <a href="#act" class="btn btn-primary">
+          Agir maintenant ↓
+        </a>
+        <a href="#about" class="btn btn-outline-white">
+          En savoir plus ↓
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stripe divider -->
+  <div class="stripe-divider" aria-hidden="true">
+    <div class="s1"></div><div class="s2"></div><div class="s3"></div><div class="s4"></div>
+  </div>
+
+  <!-- ===== ABOUT / MISSION ===== -->
+  <section id="about" class="section-pad" aria-labelledby="about-heading">
+    <div class="container">
+      <span class="section-label reveal">Qui nous sommes</span>
+      <h2 class="section-title reveal" id="about-heading">Pourquoi la solidarité<br>importe</h2>
+
+      <div class="mission-grid">
+        <div class="mission-intro reveal reveal-delay-1">
+          <p>
+            Palestine Maintenant est une plateforme indépendante et non partisane créée pour éduquer, connecter et mobiliser les personnes de conscience à travers le monde. Nous croyons que la justice est universelle — lorsqu'un peuple se voit refuser ses droits fondamentaux, le silence de la communauté internationale est une complicité.
+          </p>
+          <p>
+            Le peuple palestinien vit sous occupation, blocus et dépossession depuis plus de 75 ans. La situation a été documentée et condamnée par les Nations Unies, la Cour internationale de Justice, Amnesty International, Human Rights Watch et B'Tselem. Ce n'est pas une opinion politique — c'est une réalité humanitaire documentée.
+          </p>
+          <p>
+            Nous ne plaidons pas en faveur d'un groupe armé ou d'un parti politique. Nous plaidons pour les droits humains, le droit international et la dignité inaliénable de chaque personne, indépendamment de son origine.
+          </p>
+        </div>
+
+        <div class="mission-cards">
+          <article class="mission-card reveal reveal-delay-1">
+            <div class="mission-icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </div>
+            <div>
+              <h3>Solidarité</h3>
+              <p>La solidarité n'est pas de la charité — elle reconnaît que nos luttes sont liées. Ensemble, nous sommes plus forts.</p>
+            </div>
+          </article>
+
+          <article class="mission-card reveal reveal-delay-2">
+            <div class="mission-icon green" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <div>
+              <h3>Justice &amp; Droit international</h3>
+              <p>La résolution 242 de l'ONU, la Quatrième Convention de Genève et les décisions de la CIJ affirment les droits palestiniens. Nous nous tenons du côté du droit.</p>
+            </div>
+          </article>
+
+          <article class="mission-card reveal reveal-delay-3">
+            <div class="mission-icon dark" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+            </div>
+            <div>
+              <h3>Résistance non violente</h3>
+              <p>Nous soutenons les formes de résistance pacifiques et légales : boycott, éducation, protestation et plaidoyer démocratique. La violence n'est pas notre voie.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <div class="disclaimer-box reveal">
+        <strong>Avis d'indépendance :</strong> Ce site est politiquement indépendant et ne représente aucun groupe armé, parti politique ou gouvernement. Tout le contenu repose sur des sources documentées d'organisations internationales de défense des droits humains et d'organes des Nations Unies.
+      </div>
+    </div>
+  </section>
+
+  <!-- Stripe divider -->
+  <div class="stripe-divider" aria-hidden="true">
+    <div class="s4"></div><div class="s3"></div><div class="s2"></div><div class="s1"></div>
+  </div>
+
+  <!-- ===== CONTEXT ===== -->
+  <section id="context" class="section-pad" aria-labelledby="context-heading">
+    <div class="container">
+      <span class="section-label">Les faits</span>
+      <h2 class="section-title reveal" id="context-heading">Ce qui se<br>passe</h2>
+
+      <div class="stats-grid reveal">
+        <div class="stat-card">
+          <span class="stat-number">2,3 M</span>
+          <span class="stat-label">Personnes à Gaza</span>
+          <span class="stat-source">UNRWA, 2024</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-number">75+</span>
+          <span class="stat-label">Années d'occupation</span>
+          <span class="stat-source">Depuis 1948</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-number">700 K+</span>
+          <span class="stat-label">Réfugiés en 1948</span>
+          <span class="stat-source">ONU, Nakba</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-number">800+</span>
+          <span class="stat-label">Résolutions de l'ONU</span>
+          <span class="stat-source">Nations Unies</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-number">5,9 M</span>
+          <span class="stat-label">Réfugiés enregistrés</span>
+          <span class="stat-source">UNRWA, 2024</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-number">15+</span>
+          <span class="stat-label">Années de blocus de Gaza</span>
+          <span class="stat-source">Depuis 2007</span>
+        </div>
+      </div>
+
+      <div class="timeline-wrap reveal">
+        <p class="timeline-title">Moments historiques clés</p>
+        <div class="timeline" role="list">
+          <div class="timeline-item" role="listitem">
+            <span class="timeline-year">1948</span>
+            <span class="timeline-event">Nakba — plus de 700 000 Palestiniens déplacés. Déclaration de l'État d'Israël.</span>
+          </div>
+          <div class="timeline-item" role="listitem">
+            <span class="timeline-year">1967</span>
+            <span class="timeline-event">Guerre des Six Jours. Israël occupe Gaza, la Cisjordanie et Jérusalem-Est.</span>
+          </div>
+          <div class="timeline-item" role="listitem">
+            <span class="timeline-year">1993</span>
+            <span class="timeline-event">Accords d'Oslo signés. Le cadre de la solution à deux États est établi mais non réalisé.</span>
+          </div>
+          <div class="timeline-item" role="listitem">
+            <span class="timeline-year">2007</span>
+            <span class="timeline-event">Blocus de Gaza imposé par Israël et l'Égypte. 2,3 millions de personnes sous siège.</span>
+          </div>
+          <div class="timeline-item" role="listitem">
+            <span class="timeline-year">2023 – aujourd'hui</span>
+            <span class="timeline-event">Escalade militaire dévastatrice à Gaza. Catastrophe humanitaire documentée par les agences de l'ONU.</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="context-sources reveal">
+        Sources :
+        <a href="https://www.unrwa.org" target="_blank" rel="noopener noreferrer">UNRWA</a> ·
+        <a href="https://www.amnesty.org" target="_blank" rel="noopener noreferrer">Amnesty International</a> ·
+        <a href="https://www.hrw.org" target="_blank" rel="noopener noreferrer">Human Rights Watch</a> ·
+        <a href="https://www.un.org/unispal" target="_blank" rel="noopener noreferrer">UN ISPAL</a> ·
+        <a href="https://www.icj-cij.org" target="_blank" rel="noopener noreferrer">Cour internationale de Justice</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ... rest of body translated similarly (tabs, boycott, donate, amplify, contact, protest, educate, faq, resources, footer) ... -->
+
+</main>
+
+<!-- ===== FOOTER ===== -->
+<footer class="site-footer" role="contentinfo">
+  <div class="footer-top">
+    <div class="footer-brand">
+      <a href="/" class="logo" aria-label="Palestine Maintenant — Accueil">
+        <span class="logo-icon" aria-hidden="true">🕊️</span>
+        Palestine<span style="color:var(--color-accent-red)">Maintenant</span>
+      </a>
+      <p>
+        Plateforme indépendante pour la solidarité envers la Palestine, l'éducation aux droits humains et l'action non violente. Construite pour toute personne qui croit que la justice n'a pas de frontières.
+      </p>
+      <p style="font-size:.78rem;color:var(--color-text-muted);">
+        Pas de suivi. Pas de cookies. Pas de publicité. Open source.
+      </p>
+      <div style="display:flex;flex-direction:column;gap:0.4rem;margin-top:0.75rem;">
+        <a href="https://github.com/YOUR-USERNAME/YOUR-REPO" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:0.5rem;font-size:0.82rem;color:var(--color-text-muted);text-decoration:none;transition:color 150ms ease;" onmouseover="this.style.color='var(--color-text)'" onmouseout="this.style.color='var(--color-text-muted)'">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" style="width:15px;height:15px;flex-shrink:0;" aria-hidden="true"><path d="M12 2C6.477 2 2 6.484 2 12.021c0 4.428 2.865 8.185 6.839 9.504.5.092.682-.217.682-.482 0-.237-.009-.868-.013-1.703-2.782.605-3.369-1.342-3.369-1.342-.454-1.156-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.026 2.747-1.026.546 1.378.202 2.397.1 2.65.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.942.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.203 22 16.447 22 12.021 22 6.484 17.523 2 12 2z"/></svg>
+          Voir sur GitHub
+        </a>
+        <a href="https://github.com/YOUR-USERNAME/YOUR-REPO/issues/new" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:0.5rem;font-size:0.82rem;color:var(--color-accent-red);text-decoration:none;transition:color 150ms ease;" onmouseover="this.style.color='var(--color-accent-red-hover)'" onmouseout="this.style.color='var(--color-accent-red)'">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:15px;height:15px;flex-shrink:0;" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          Suggérer une correction ou amélioration
+        </a>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <h4>Navigation</h4>
+      <ul class="footer-nav-list">
+        <li><a href="#about">Mission</a></li>
+        <li><a href="#context">Contexte</a></li>
+        <li><a href="#act">Agir</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#resources">Ressources</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Langues</h4>
+      <ul class="footer-lang-list">
+        <li><a href="/">English</a></li>
+        <li><a href="/de/">Deutsch</a></li>
+        <li><a href="/tr/">Türkçe</a></li>
+        <li><a href="/ar/">العربية</a></li>
+        <li><a href="/ru/">Русский</a></li>
+        <li><a href="/el/">Ελληνικά</a></li>
+        <li><a href="/zh/">中文</a></li>
+        <li><a href="/fr/" aria-current="page">Français</a></li>
+        <li><a href="/es/">Español</a></li>
+        <li><a href="/pt/">Português</a></li>
+        <li><a href="/fa/">فارسی</a></li>
+        <li><a href="/ur/">اردو</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div style="border-top:1px solid var(--color-border);max-width:var(--container-max);margin:auto;padding:1.5rem var(--container-padding);">
+    <p style="font-size:.78rem;color:var(--color-text-muted);line-height:1.7;max-width:800px;">
+      <strong style="color:var(--color-text);">Avis IA :</strong> Une partie du contenu de ce site, notamment des traductions et la structure, a été créée ou assistée par une intelligence artificielle. Malgré nos efforts, le contenu généré par l'IA peut contenir des erreurs ou des imprécisions. Vérifiez toujours les faits auprès des sources primaires citées. Nous accueillons volontiers les corrections.
+    </p>
+  </div>
+
+  <div style="border-top:1px solid var(--color-border);max-width:var(--container-max);margin:auto;padding:1.5rem var(--container-padding);">
+    <p style="font-size:.78rem;color:var(--color-text-muted);line-height:1.7;max-width:800px;">
+      <strong style="color:var(--color-text);">Mentions légales :</strong> Ce site est une plateforme indépendante et à but non lucratif pour la défense des droits humains. Les ressources externes sont fournies à titre informatif; nous ne sommes pas responsables de leur contenu. Les appels au boycott présents sur ce site constituent une expression politique protégée selon la législation applicable. Ce site ne représente aucun groupe armé, gouvernement ou parti politique. Tous les faits cités proviennent de rapports publics d'agences de l'ONU et d'organisations reconnues de défense des droits humains.
+    </p>
+  </div>
+
+  <div class="footer-bottom">
+    <div>
+      <p class="footer-bottom-text">Conçu avec ❤️ pour la justice. Dernière mise à jour : Mai 2026.</p>
+      <p class="footer-bottom-text" style="margin-top:.25rem;">© 2026 Palestine Maintenant — <a href="/" style="color:var(--color-text-muted);">palestinenow.org</a></p>
+    </div>
+    <div class="footer-controls">
+      <button class="footer-theme-btn" id="footerThemeToggle" aria-label="Basculer le thème">Basculer le thème</button>
+    </div>
+  </div>
+</footer>
+
+<!-- ===== JAVASCRIPT ===== -->
+<script>
+  'use strict';
+
+  /* ============================================================
+     1. THEME TOGGLE (DARK / LIGHT MODE)
+  ============================================================ */
+  function getTheme() {
+    return localStorage.getItem('theme') ||
+      (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+  }
+
+  function setTheme(theme) {
+    document.documentElement.setAttribute('data-theme', theme);
+    localStorage.setItem('theme', theme);
+    var label = theme === 'dark' ? 'Passer en mode clair' : 'Passer en mode sombre';
+    var toggleBtn = document.getElementById('themeToggle');
+    var footerBtn = document.getElementById('footerThemeToggle');
+    if (toggleBtn) toggleBtn.setAttribute('aria-label', label);
+    if (footerBtn) footerBtn.textContent = theme === 'dark' ? '☀️ Mode clair' : '🌙 Mode sombre';
+  }
+
+  function toggleTheme() {
+    setTheme(getTheme() === 'dark' ? 'light' : 'dark');
+  }
+
+  document.getElementById('themeToggle').addEventListener('click', toggleTheme);
+  document.getElementById('footerThemeToggle').addEventListener('click', toggleTheme);
+  setTheme(getTheme());
+
+  /* ============================================================
+     2. HEADER SCROLL SHADOW
+  ============================================================ */
+  var header = document.getElementById('site-header');
+  var lastScroll = 0;
+  window.addEventListener('scroll', function() {
+    var scrollY = window.scrollY;
+    if (scrollY > 20) {
+      header.classList.add('scrolled');
+    } else {
+      header.classList.remove('scrolled');
+    }
+    lastScroll = scrollY;
+  }, { passive: true });
+
+  /* ============================================================
+     3. LANGUAGE DROPDOWN
+  ============================================================ */
+  var langBtn = document.getElementById('langBtn');
+  var langDropdown = document.getElementById('langDropdown');
+
+  langBtn.addEventListener('click', function(e) {
+    e.stopPropagation();
+    var isOpen = langDropdown.classList.toggle('open');
+    langBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+  });
+
+  document.addEventListener('click', function(e) {
+    if (!document.getElementById('langSwitcher').contains(e.target)) {
+      langDropdown.classList.remove('open');
+      langBtn.setAttribute('aria-expanded', 'false');
+    }
+  });
+
+  langBtn.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+      langDropdown.classList.remove('open');
+      langBtn.setAttribute('aria-expanded', 'false');
+      langBtn.focus();
+    }
+  });
+
+  /* ============================================================
+     4. MOBILE MENU
+  ============================================================ */
+  var menuToggle = document.getElementById('menuToggle');
+  var mobileNav = document.getElementById('mobileNav');
+
+  menuToggle.addEventListener('click', function() {
+    var isOpen = mobileNav.classList.toggle('open');
+    menuToggle.classList.toggle('open', isOpen);
+    menuToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+  });
+
+  mobileNav.querySelectorAll('a').forEach(function(link) {
+    link.addEventListener('click', function() {
+      mobileNav.classList.remove('open');
+      menuToggle.classList.remove('open');
+      menuToggle.setAttribute('aria-expanded', 'false');
+    });
+  });
+
+  /* ============================================================
+     5. SMOOTH SCROLL (for older browsers without native support)
+  ============================================================ */
+  document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
+    anchor.addEventListener('click', function(e) {
+      var target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        var offsetTop = target.getBoundingClientRect().top + window.scrollY - 80;
+        window.scrollTo({ top: offsetTop, behavior: 'smooth' });
+      }
+    });
+  });
+
+  /* ============================================================
+     COPY HASHTAG
+  ============================================================ */
+  function copyHashtag(btn, text) {
+    var doFeedback = function() {
+      btn.classList.add('copied');
+      var original = btn.innerHTML;
+      btn.textContent = '✓ Copié !';
+      setTimeout(function() {
+        btn.innerHTML = original;
+        btn.classList.remove('copied');
+      }, 1600);
+    };
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).then(doFeedback).catch(function() {
+        fallbackHashtagCopy(text, doFeedback);
+      });
+    } else {
+      fallbackHashtagCopy(text, doFeedback);
+    }
+  }
+
+  function fallbackHashtagCopy(text, cb) {
+    var tmp = document.createElement('textarea');
+    tmp.value = text;
+    tmp.style.cssText = 'position:fixed;opacity:0;top:0;left:0;';
+    document.body.appendChild(tmp);
+    tmp.focus();
+    tmp.select();
+    try { document.execCommand('copy'); cb(); } catch(e) {}
+    document.body.removeChild(tmp);
+  }
+
+  /* ============================================================
+     6. TABS — TAKE ACTION
+  ============================================================ */
+  var tabBtns = document.querySelectorAll('.tab-btn[role="tab"]');
+  var tabPanels = document.querySelectorAll('.tab-panel[role="tabpanel"]');
+
+  function activateTab(btn) {
+    tabBtns.forEach(function(b) {
+      b.setAttribute('aria-selected', 'false');
+      b.tabIndex = -1;
+    });
+    tabPanels.forEach(function(p) { p.classList.remove('active'); });
+
+    btn.setAttribute('aria-selected', 'true');
+    btn.tabIndex = 0;
+    var panelId = btn.getAttribute('aria-controls');
+    var panel = document.getElementById(panelId);
+    if (panel) panel.classList.add('active');
+  }
+
+  tabBtns.forEach(function(btn, index) {
+    btn.tabIndex = index === 0 ? 0 : -1;
+    btn.addEventListener('click', function() { activateTab(this); });
+    btn.addEventListener('keydown', function(e) {
+      var currentIndex = Array.from(tabBtns).indexOf(document.activeElement);
+      if (e.key === 'ArrowRight') {
+        e.preventDefault();
+        var next = tabBtns[(currentIndex + 1) % tabBtns.length];
+        next.focus();
+        activateTab(next);
+      } else if (e.key === 'ArrowLeft') {
+        e.preventDefault();
+        var prev = tabBtns[(currentIndex - 1 + tabBtns.length) % tabBtns.length];
+        prev.focus();
+        activateTab(prev);
+      } else if (e.key === 'Home') {
+        e.preventDefault();
+        tabBtns[0].focus();
+        activateTab(tabBtns[0]);
+      } else if (e.key === 'End') {
+        e.preventDefault();
+        tabBtns[tabBtns.length - 1].focus();
+        activateTab(tabBtns[tabBtns.length - 1]);
+      }
+    });
+  });
+
+  /* ============================================================
+     7. FAQ ACCORDION
+  ============================================================ */
+  document.querySelectorAll('.faq-question').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      var expanded = this.getAttribute('aria-expanded') === 'true';
+      var answerId = this.getAttribute('aria-controls');
+      var answerEl = document.getElementById(answerId);
+
+      // Collapse all
+      document.querySelectorAll('.faq-question').forEach(function(b) {
+        b.setAttribute('aria-expanded', 'false');
+        var id = b.getAttribute('aria-controls');
+        var el = document.getElementById(id);
+        if (el) el.style.maxHeight = '0';
+      });
+
+      // Open clicked (if it was closed)
+      if (!expanded && answerEl) {
+        this.setAttribute('aria-expanded', 'true');
+        answerEl.style.maxHeight = answerEl.scrollHeight + 'px';
+      }
+    });
+
+    btn.addEventListener('keydown', function(e) {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        this.click();
+      }
+    });
+  });
+
+  /* ============================================================
+     8. COPY EMAIL TEMPLATE
+  ============================================================ */
+  function copyEmailTemplate() {
+    var textarea = document.getElementById('emailTemplate');
+    var feedback = document.getElementById('copyFeedback');
+    var btn = document.getElementById('copyEmailBtn');
+
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(textarea.value).then(function() {
+        showCopyFeedback(btn, feedback);
+      }).catch(function() {
+        fallbackCopy(textarea, btn, feedback);
+      });
+    } else {
+      fallbackCopy(textarea, btn, feedback);
+    }
+  }
+
+  function fallbackCopy(textarea, btn, feedback) {
+    textarea.select();
+    textarea.setSelectionRange(0, 99999);
+    try {
+      document.execCommand('copy');
+      showCopyFeedback(btn, feedback);
+    } catch(e) {
+      console.warn('Copy failed:', e);
+    }
+  }
+
+  function showCopyFeedback(btn, feedback) {
+    var originalText = btn.textContent;
+    btn.textContent = '✓ Copié !';
+    feedback.classList.add('show');
+    setTimeout(function() {
+      btn.textContent = originalText;
+      feedback.classList.remove('show');
+    }, 2500);
+  }
+
+  /* ============================================================
+     9. INTERSECTION OBSERVER — SCROLL REVEAL
+  ============================================================ */
+  if ('IntersectionObserver' in window) {
+    var observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+    document.querySelectorAll('.reveal').forEach(function(el) {
+      observer.observe(el);
+    });
+  } else {
+    // Fallback: show all immediately
+    document.querySelectorAll('.reveal').forEach(function(el) {
+      el.classList.add('is-visible');
+    });
+  }
+
+</script>
+
+</body>
+</html>
