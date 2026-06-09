@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://alit3cc.github.io/palestine/sitemap.xml

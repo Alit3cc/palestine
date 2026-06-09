@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://alit3cc.github.io/palestine/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alit3cc.github.io/palestine/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://alit3cc.github.io/palestine/de/"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://alit3cc.github.io/palestine/tr/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://alit3cc.github.io/palestine/ar/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://alit3cc.github.io/palestine/ru/"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://alit3cc.github.io/palestine/el/"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://alit3cc.github.io/palestine/zh/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://alit3cc.github.io/palestine/fr/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://alit3cc.github.io/palestine/es/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://alit3cc.github.io/palestine/pt/"/>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://alit3cc.github.io/palestine/fa/"/>
+    <xhtml:link rel="alternate" hreflang="ur" href="https://alit3cc.github.io/palestine/ur/"/>
+    <lastmod>2026-05-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url><loc>https://alit3cc.github.io/palestine/de/</loc><lastmod>2026-05-10</lastmod><priority>0.9</priority></url>
+  <url><loc>https://alit3cc.github.io/palestine/tr/</loc><lastmod>2026-05-10</lastmod><priority>0.9</priority></url>
+  <url><loc>https://alit3cc.github.io/palestine/ar/</loc><lastmod>2026-05-10</lastmod><priority>0.9</priority></url>
+  <url><loc>https://alit3cc.github.io/palestine/ru/</loc><lastmod>2026-05-10</lastmod><priority>0.9</priority></url>
+  <url><loc>https://alit3cc.github.io/palestine/el/</loc><lastmod>2026-05-10</lastmod><priority>0.9</priority></url>
+  <url><loc>https://alit3cc.github.io/palestine/zh/</loc><lastmod>2026-05-10</lastmod><priority>0.9</priority></url>
+  <url><loc>https://alit3cc.github.io/palestine/fr/</loc><lastmod>2026-05-10</lastmod><priority>0.9</priority></url>
+  <url><loc>https://alit3cc.github.io/palestine/es/</loc><lastmod>2026-05-10</lastmod><priority>0.9</priority></url>
+  <url><loc>https://alit3cc.github.io/palestine/pt/</loc><lastmod>2026-05-10</lastmod><priority>0.9</priority></url>
+  <url><loc>https://alit3cc.github.io/palestine/fa/</loc><lastmod>2026-05-10</lastmod><priority>0.9</priority></url>
+  <url><loc>https://alit3cc.github.io/palestine/ur/</loc><lastmod>2026-05-10</lastmod><priority>0.9</priority></url>
+</urlset>

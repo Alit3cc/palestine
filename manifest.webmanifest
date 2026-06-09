@@ -1,0 +1,10 @@
+{
+  "name": "Palestine Now",
+  "short_name": "PalestineNow",
+  "description": "برای عدالت فلسطین بایستید. اقدام کنید.",
+  "start_url": "/palestine/",
+  "display": "standalone",
+  "background_color": "#0a0a0a",
+  "theme_color": "#ce1126",
+  "lang": "fa"
+}
